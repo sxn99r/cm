@@ -1,0 +1,558 @@
+\begin{theindex}
+
+  \item {$\sim$CM}
+    \subitem {CM}, 12
+
+  \indexspace
+
+  \item {allocate\_\-memory\_\-bicm}
+    \subitem {CM}, 13
+  \item {allocate\_\-memory\_\-tcm}
+    \subitem {CM}, 13
+  \item {allocate\_\-memory\_\-ttcm}
+    \subitem {CM}, 13
+  \item {Apo}
+    \subitem {MAP\_\-dec}, 22
+  \item {Apo\_\-coded\_\-bit}
+    \subitem {SISO\_\-dec}, 24
+  \item {Apo\_\-data\_\-bit}
+    \subitem {SISO\_\-dec}, 24
+  \item {Apo\_\-dataword}
+    \subitem {SISO\_\-dec}, 24
+  \item {APPROX\_\-LOG\_\-MAP}
+    \subitem {cm.h}, 29
+  \item {Apr}
+    \subitem {MAP\_\-dec}, 22
+  \item {Apr\_\-coded\_\-bit}
+    \subitem {SISO\_\-dec}, 24
+
+  \indexspace
+
+  \item {BICM}
+    \subitem {cm.h}, 29
+  \item {bicm}
+    \subitem {CM}, 15
+  \item {BICM\_\-ID\_\-dec\_\-log\_\-long\_\-cw}
+    \subitem {CM}, 14
+  \item {BICM\_\-ID\_\-dec\_\-log\_\-pun\_\-long\_\-cw}
+    \subitem {CM}, 14
+  \item {BICM\_\-parameters}, 9
+    \subitem {bit\_\-interleaver}, 9
+    \subitem {Gen\-Poly}, 10
+    \subitem {k}, 9
+    \subitem {L}, 9
+    \subitem {Lb}, 10
+    \subitem {M}, 9
+    \subitem {n}, 9
+    \subitem {No\-Branches}, 9
+    \subitem {No\-States}, 9
+    \subitem {Ns}, 10
+    \subitem {Ps}, 10
+    \subitem {puncture}, 9
+    \subitem {puncture\_\-code}, 9
+  \item {BICMEnc}
+    \subitem {CM}, 14
+  \item {BICMEnc\_\-Puncture}
+    \subitem {CM}, 14
+  \item {BICMID}
+    \subitem {cm.h}, 29
+  \item {bicmid}
+    \subitem {CM}, 15
+  \item {BICMID\_\-parameters}, 11
+    \subitem {iterations}, 11
+  \item {bit\_\-de\_\-intlvi}
+    \subitem {CM}, 14
+  \item {bit\_\-de\_\-intlvm\_\-3d}
+    \subitem {CM}, 14
+  \item {bit\_\-interleaver}
+    \subitem {BICM\_\-parameters}, 9
+  \item {bit\_\-intlvi}
+    \subitem {CM}, 14
+  \item {bit\_\-intlvm\_\-3d}
+    \subitem {CM}, 14
+  \item {BitPr\_\-to\_\-Pr\_\-log}
+    \subitem {CM}, 16
+  \item {bits\_\-per\_\-symbol}
+    \subitem {modulation\_\-param}, 23
+  \item {bits\_\-seq\_\-to\_\-symbol}
+    \subitem {CM}, 16
+  \item {bits\_\-to\_\-symbol}
+    \subitem {CM}, 16
+
+  \indexspace
+
+  \item {CM}, 12
+    \subitem {$\sim$CM}, 12
+    \subitem {allocate\_\-memory\_\-bicm}, 13
+    \subitem {allocate\_\-memory\_\-tcm}, 13
+    \subitem {allocate\_\-memory\_\-ttcm}, 13
+    \subitem {bicm}, 15
+    \subitem {BICM\_\-ID\_\-dec\_\-log\_\-long\_\-cw}, 14
+    \subitem {BICM\_\-ID\_\-dec\_\-log\_\-pun\_\-long\_\-cw}, 14
+    \subitem {BICMEnc}, 14
+    \subitem {BICMEnc\_\-Puncture}, 14
+    \subitem {bicmid}, 15
+    \subitem {bit\_\-de\_\-intlvi}, 14
+    \subitem {bit\_\-de\_\-intlvm\_\-3d}, 14
+    \subitem {bit\_\-intlvi}, 14
+    \subitem {bit\_\-intlvm\_\-3d}, 14
+    \subitem {Bit\-Pr\_\-to\_\-Pr\_\-log}, 16
+    \subitem {bits\_\-seq\_\-to\_\-symbol}, 16
+    \subitem {bits\_\-to\_\-symbol}, 16
+    \subitem {CM}, 12
+    \subitem {compute\_\-Pr\_\-from\_\-Pr\-IQ}, 15
+    \subitem {de\_\-intlvd\_\-2d}, 14
+    \subitem {de\_\-intlvi}, 14
+    \subitem {de\_\-intlvm\_\-3d}, 14
+    \subitem {decode}, 17
+    \subitem {decode\_\-symbol}, 17
+    \subitem {decoder\_\-type}, 16
+    \subitem {demodulate\_\-soft\_\-symbols}, 17, 18
+    \subitem {demodulate\_\-soft\_\-symbols\_\-IQ}, 14
+    \subitem {depuncture}, 14
+    \subitem {encode}, 18
+    \subitem {extrinsic\_\-demod\_\-log}, 14
+    \subitem {get\_\-Apo\_\-dataword}, 14
+    \subitem {get\_\-CC\_\-poly}, 18
+    \subitem {get\_\-coded\_\-bit\_\-length}, 12
+    \subitem {get\_\-coderate}, 13
+    \subitem {get\_\-gen\_\-poly}, 18
+    \subitem {get\_\-I\_\-table}, 15
+    \subitem {get\_\-info\_\-bit\_\-length}, 12
+    \subitem {get\_\-info\_\-sym\_\-length}, 12
+    \subitem {get\_\-iterations}, 13
+    \subitem {get\_\-Q\_\-table}, 15
+    \subitem {get\_\-sym\_\-length}, 12
+    \subitem {get\_\-termination\_\-bit\_\-length}, 13
+    \subitem {init\_\-channel\_\-interleaver}, 13
+    \subitem {init\_\-iq\_\-tables}, 15
+    \subitem {init\_\-OES\_\-interleaver}, 14
+    \subitem {init\_\-random\_\-interleaver}, 14
+    \subitem {init\_\-TTCM\_\-interleaver}, 13
+    \subitem {init\-CC}, 13
+    \subitem {initialise}, 18
+    \subitem {init\-Modulation\_\-GRAY}, 13
+    \subitem {init\-Modulation\_\-SP}, 13
+    \subitem {init\-Puncture\-CC}, 13
+    \subitem {init\-TCM}, 13
+    \subitem {interleaver}, 15
+    \subitem {interleaver\_\-mode}, 16
+    \subitem {intlv\_\-termination\_\-locat}, 14
+    \subitem {intlvd\_\-2d}, 14
+    \subitem {intlvi}, 14
+    \subitem {intlvm\_\-3d}, 14
+    \subitem {iq\_\-de\_\-intlvc}, 15
+    \subitem {iq\_\-intlvc}, 15
+    \subitem {iterations}, 16
+    \subitem {jacolog}, 14
+    \subitem {jacolog\_\-1}, 16
+    \subitem {jacolog\_\-2}, 16
+    \subitem {jacolog\_\-3}, 16
+    \subitem {k}, 16
+    \subitem {L}, 16
+    \subitem {log\_\-mapdec}, 14
+    \subitem {log\_\-TTCM\_\-dec}, 14
+    \subitem {map}, 15
+    \subitem {mode}, 16
+    \subitem {modulate\_\-symbols}, 19
+    \subitem {modulation}, 15
+    \subitem {modulation\_\-type}, 16
+    \subitem {n}, 16
+    \subitem {no\_\-of\_\-coded\_\-bits}, 16
+    \subitem {no\_\-of\_\-info\_\-bits}, 17
+    \subitem {no\_\-of\_\-info\_\-symbols}, 16
+    \subitem {no\_\-of\_\-input\_\-bits}, 17
+    \subitem {no\_\-of\_\-symbols}, 16
+    \subitem {no\_\-of\_\-tail\_\-bits}, 17
+    \subitem {OPr}, 15
+    \subitem {OPr2}, 15
+    \subitem {Pr}, 15
+    \subitem {Pr\_\-to\_\-Bit\-Pr\_\-log}, 16
+    \subitem {Pr\-I}, 15
+    \subitem {Pr\-Q}, 15
+    \subitem {puncture}, 14
+    \subitem {set\_\-parameters}, 19
+    \subitem {siso}, 15
+    \subitem {SISO\_\-dec\_\-log}, 14
+    \subitem {symbol\_\-to\_\-bits}, 16
+    \subitem {symbol\_\-to\_\-bits\_\-seq}, 16
+    \subitem {tcm}, 15
+    \subitem {TCMEnc}, 13
+    \subitem {Terminated}, 16
+    \subitem {ttcm}, 15
+    \subitem {Turbo\-TCMEnc}, 14
+  \item {cm.cpp}, 27
+    \subitem {correct\_\-rounding\_\-error}, 27
+    \subitem {makebits}, 27
+    \subitem {octal\_\-to\_\-decimal}, 27
+    \subitem {s\_\-error}, 27
+  \item {cm.h}, 28
+    \subitem {APPROX\_\-LOG\_\-MAP}, 29
+    \subitem {BICM}, 29
+    \subitem {BICMID}, 29
+    \subitem {CPSK}, 28
+    \subitem {CQAM}, 28
+    \subitem {EXACT\_\-LOG\_\-MAP}, 29
+    \subitem {GRAY}, 28
+    \subitem {IQ\_\-INTLV}, 29
+    \subitem {MAP}, 29
+    \subitem {MAX\_\-LOG\_\-MAP}, 29
+    \subitem {MINF}, 29
+    \subitem {NO\_\-LINK}, 29
+    \subitem {OFF}, 29
+    \subitem {ON}, 29
+    \subitem {SP}, 28
+    \subitem {TCM}, 29
+    \subitem {TTCM}, 29
+  \item {cm\_\-test.cpp}, 30
+    \subitem {main}, 30
+    \subitem {MAXFRAMENO}, 30
+  \item {Coded Modulation}, 7
+  \item {compute\_\-Pr\_\-from\_\-PrIQ}
+    \subitem {CM}, 15
+  \item {correct\_\-rounding\_\-error}
+    \subitem {cm.cpp}, 27
+  \item {CPSK}
+    \subitem {cm.h}, 28
+  \item {CQAM}
+    \subitem {cm.h}, 28
+
+  \indexspace
+
+  \item {de\_\-intlvd\_\-2d}
+    \subitem {CM}, 14
+  \item {de\_\-intlvi}
+    \subitem {CM}, 14
+  \item {de\_\-intlvm\_\-3d}
+    \subitem {CM}, 14
+  \item {decode}
+    \subitem {CM}, 17
+  \item {decode\_\-symbol}
+    \subitem {CM}, 17
+  \item {decoder\_\-type}
+    \subitem {CM}, 16
+  \item {demodulate\_\-soft\_\-symbols}
+    \subitem {CM}, 17, 18
+  \item {demodulate\_\-soft\_\-symbols\_\-IQ}
+    \subitem {CM}, 14
+  \item {depuncture}
+    \subitem {CM}, 14
+
+  \indexspace
+
+  \item {encode}
+    \subitem {CM}, 18
+  \item {EXACT\_\-LOG\_\-MAP}
+    \subitem {cm.h}, 29
+  \item {extrinsic\_\-demod\_\-log}
+    \subitem {CM}, 14
+
+  \indexspace
+
+  \item {GenPoly}
+    \subitem {BICM\_\-parameters}, 10
+    \subitem {TCM\_\-parameters}, 25
+  \item {get\_\-Apo\_\-dataword}
+    \subitem {CM}, 14
+  \item {get\_\-CC\_\-poly}
+    \subitem {CM}, 18
+  \item {get\_\-coded\_\-bit\_\-length}
+    \subitem {CM}, 12
+  \item {get\_\-coderate}
+    \subitem {CM}, 13
+  \item {get\_\-gen\_\-poly}
+    \subitem {CM}, 18
+  \item {get\_\-I\_\-table}
+    \subitem {CM}, 15
+  \item {get\_\-info\_\-bit\_\-length}
+    \subitem {CM}, 12
+  \item {get\_\-info\_\-sym\_\-length}
+    \subitem {CM}, 12
+  \item {get\_\-iterations}
+    \subitem {CM}, 13
+  \item {get\_\-Q\_\-table}
+    \subitem {CM}, 15
+  \item {get\_\-sym\_\-length}
+    \subitem {CM}, 12
+  \item {get\_\-termination\_\-bit\_\-length}
+    \subitem {CM}, 13
+  \item {GRAY}
+    \subitem {cm.h}, 28
+
+  \indexspace
+
+  \item {i\_\-table}
+    \subitem {interleaver\_\-control}, 21
+  \item {init\_\-channel\_\-interleaver}
+    \subitem {CM}, 13
+  \item {init\_\-iq\_\-tables}
+    \subitem {CM}, 15
+  \item {init\_\-OES\_\-interleaver}
+    \subitem {CM}, 14
+  \item {init\_\-random\_\-interleaver}
+    \subitem {CM}, 14
+  \item {init\_\-TTCM\_\-interleaver}
+    \subitem {CM}, 13
+  \item {initCC}
+    \subitem {CM}, 13
+  \item {initialise}
+    \subitem {CM}, 18
+  \item {initModulation\_\-GRAY}
+    \subitem {CM}, 13
+  \item {initModulation\_\-SP}
+    \subitem {CM}, 13
+  \item {initPunctureCC}
+    \subitem {CM}, 13
+  \item {initTCM}
+    \subitem {CM}, 13
+  \item {interleaver}
+    \subitem {CM}, 15
+    \subitem {TTCM\_\-parameters}, 26
+  \item {interleaver\_\-control}, 21
+    \subitem {i\_\-table}, 21
+    \subitem {length}, 21
+    \subitem {mode}, 21
+    \subitem {q\_\-table}, 21
+    \subitem {table}, 21
+  \item {interleaver\_\-mode}
+    \subitem {CM}, 16
+  \item {intlv\_\-termination\_\-locat}
+    \subitem {CM}, 14
+  \item {intlvd\_\-2d}
+    \subitem {CM}, 14
+  \item {intlvi}
+    \subitem {CM}, 14
+  \item {intlvm\_\-3d}
+    \subitem {CM}, 14
+  \item {Ip1}
+    \subitem {MAP\_\-dec}, 22
+  \item {Ip2}
+    \subitem {MAP\_\-dec}, 22
+  \item {iq\_\-de\_\-intlvc}
+    \subitem {CM}, 15
+  \item {IQ\_\-INTLV}
+    \subitem {cm.h}, 29
+  \item {iq\_\-intlvc}
+    \subitem {CM}, 15
+  \item {iterations}
+    \subitem {BICMID\_\-parameters}, 11
+    \subitem {CM}, 16
+    \subitem {TTCM\_\-parameters}, 26
+
+  \indexspace
+
+  \item {jacolog}
+    \subitem {CM}, 14
+  \item {jacolog\_\-1}
+    \subitem {CM}, 16
+  \item {jacolog\_\-2}
+    \subitem {CM}, 16
+  \item {jacolog\_\-3}
+    \subitem {CM}, 16
+
+  \indexspace
+
+  \item {k}
+    \subitem {BICM\_\-parameters}, 9
+    \subitem {CM}, 16
+    \subitem {TCM\_\-parameters}, 25
+
+  \indexspace
+
+  \item {L}
+    \subitem {BICM\_\-parameters}, 9
+    \subitem {CM}, 16
+    \subitem {TCM\_\-parameters}, 25
+  \item {last}
+    \subitem {TCM\_\-parameters}, 25
+  \item {Lb}
+    \subitem {BICM\_\-parameters}, 10
+    \subitem {TCM\_\-parameters}, 25
+  \item {length}
+    \subitem {interleaver\_\-control}, 21
+  \item {log\_\-mapdec}
+    \subitem {CM}, 14
+  \item {log\_\-TTCM\_\-dec}
+    \subitem {CM}, 14
+
+  \indexspace
+
+  \item {M}
+    \subitem {BICM\_\-parameters}, 9
+  \item {main}
+    \subitem {cm\_\-test.cpp}, 30
+  \item {makebits}
+    \subitem {cm.cpp}, 27
+  \item {MAP}
+    \subitem {cm.h}, 29
+  \item {map}
+    \subitem {CM}, 15
+  \item {MAP\_\-dec}, 22
+    \subitem {Apo}, 22
+    \subitem {Apr}, 22
+    \subitem {Ip1}, 22
+    \subitem {Ip2}, 22
+  \item {MAX\_\-LOG\_\-MAP}
+    \subitem {cm.h}, 29
+  \item {MAXFRAMENO}
+    \subitem {cm\_\-test.cpp}, 30
+  \item {MINF}
+    \subitem {cm.h}, 29
+  \item {mode}
+    \subitem {CM}, 16
+    \subitem {interleaver\_\-control}, 21
+    \subitem {modulation\_\-param}, 23
+  \item {modulate\_\-symbols}
+    \subitem {CM}, 19
+  \item {modulation}
+    \subitem {CM}, 15
+  \item {modulation\_\-param}, 23
+    \subitem {bits\_\-per\_\-symbol}, 23
+    \subitem {mode}, 23
+    \subitem {number\_\-of\_\-I\_\-levels}, 23
+    \subitem {number\_\-of\_\-levels}, 23
+    \subitem {number\_\-of\_\-Q\_\-levels}, 23
+    \subitem {Symbol\-Mapping}, 23
+    \subitem {Symbol\-Mapping\-I}, 23
+    \subitem {Symbol\-Mapping\-Q}, 23
+    \subitem {type}, 23
+  \item {modulation\_\-type}
+    \subitem {CM}, 16
+
+  \indexspace
+
+  \item {n}
+    \subitem {BICM\_\-parameters}, 9
+    \subitem {CM}, 16
+    \subitem {TCM\_\-parameters}, 25
+  \item {NO\_\-LINK}
+    \subitem {cm.h}, 29
+  \item {no\_\-of\_\-coded\_\-bits}
+    \subitem {CM}, 16
+  \item {no\_\-of\_\-info\_\-bits}
+    \subitem {CM}, 17
+  \item {no\_\-of\_\-info\_\-symbols}
+    \subitem {CM}, 16
+  \item {no\_\-of\_\-input\_\-bits}
+    \subitem {CM}, 17
+  \item {no\_\-of\_\-symbols}
+    \subitem {CM}, 16
+  \item {no\_\-of\_\-tail\_\-bits}
+    \subitem {CM}, 17
+  \item {NoBranches}
+    \subitem {BICM\_\-parameters}, 9
+    \subitem {TCM\_\-parameters}, 25
+  \item {NoStates}
+    \subitem {BICM\_\-parameters}, 9
+    \subitem {TCM\_\-parameters}, 25
+  \item {Ns}
+    \subitem {BICM\_\-parameters}, 10
+    \subitem {TCM\_\-parameters}, 25
+  \item {number\_\-of\_\-I\_\-levels}
+    \subitem {modulation\_\-param}, 23
+  \item {number\_\-of\_\-levels}
+    \subitem {modulation\_\-param}, 23
+  \item {number\_\-of\_\-Q\_\-levels}
+    \subitem {modulation\_\-param}, 23
+
+  \indexspace
+
+  \item {octal\_\-to\_\-decimal}
+    \subitem {cm.cpp}, 27
+  \item {OFF}
+    \subitem {cm.h}, 29
+  \item {ON}
+    \subitem {cm.h}, 29
+  \item {OPr}
+    \subitem {CM}, 15
+  \item {OPr2}
+    \subitem {CM}, 15
+
+  \indexspace
+
+  \item {Pr}
+    \subitem {CM}, 15
+  \item {Pr\_\-to\_\-BitPr\_\-log}
+    \subitem {CM}, 16
+  \item {PrI}
+    \subitem {CM}, 15
+  \item {PrQ}
+    \subitem {CM}, 15
+  \item {Ps}
+    \subitem {BICM\_\-parameters}, 10
+    \subitem {TCM\_\-parameters}, 25
+  \item {puncture}
+    \subitem {BICM\_\-parameters}, 9
+    \subitem {CM}, 14
+  \item {puncture\_\-code}
+    \subitem {BICM\_\-parameters}, 9
+
+  \indexspace
+
+  \item {q\_\-table}
+    \subitem {interleaver\_\-control}, 21
+
+  \indexspace
+
+  \item {s\_\-error}
+    \subitem {cm.cpp}, 27
+  \item {set\_\-parameters}
+    \subitem {CM}, 19
+  \item {siso}
+    \subitem {CM}, 15
+  \item {SISO\_\-dec}, 24
+    \subitem {Apo\_\-coded\_\-bit}, 24
+    \subitem {Apo\_\-data\_\-bit}, 24
+    \subitem {Apo\_\-dataword}, 24
+    \subitem {Apr\_\-coded\_\-bit}, 24
+  \item {SISO\_\-dec\_\-log}
+    \subitem {CM}, 14
+  \item {SP}
+    \subitem {cm.h}, 28
+  \item {symbol\_\-to\_\-bits}
+    \subitem {CM}, 16
+  \item {symbol\_\-to\_\-bits\_\-seq}
+    \subitem {CM}, 16
+  \item {SymbolMapping}
+    \subitem {modulation\_\-param}, 23
+  \item {SymbolMappingI}
+    \subitem {modulation\_\-param}, 23
+  \item {SymbolMappingQ}
+    \subitem {modulation\_\-param}, 23
+
+  \indexspace
+
+  \item {table}
+    \subitem {interleaver\_\-control}, 21
+  \item {TCM}
+    \subitem {cm.h}, 29
+  \item {tcm}
+    \subitem {CM}, 15
+  \item {TCM\_\-parameters}, 25
+    \subitem {Gen\-Poly}, 25
+    \subitem {k}, 25
+    \subitem {L}, 25
+    \subitem {last}, 25
+    \subitem {Lb}, 25
+    \subitem {n}, 25
+    \subitem {No\-Branches}, 25
+    \subitem {No\-States}, 25
+    \subitem {Ns}, 25
+    \subitem {Ps}, 25
+  \item {TCMEnc}
+    \subitem {CM}, 13
+  \item {Terminated}
+    \subitem {CM}, 16
+  \item {TTCM}
+    \subitem {cm.h}, 29
+  \item {ttcm}
+    \subitem {CM}, 15
+  \item {TTCM\_\-parameters}, 26
+    \subitem {interleaver}, 26
+    \subitem {iterations}, 26
+  \item {TurboTCMEnc}
+    \subitem {CM}, 14
+  \item {type}
+    \subitem {modulation\_\-param}, 23
+
+\end{theindex}

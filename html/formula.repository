@@ -1,0 +1,4 @@
+\form#0:$ 2^{n\_in} $
+\form#1:$ frame_index \in\{0\ldots L-1\} $
+\form#2:$ frame\_index \in\{0\ldots J-1\} $
+\form#3:$ Eb = Es/(R*BPS) $

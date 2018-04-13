@@ -1,0 +1,9 @@
+100 0    # max number of frame
+5         # min EbN0
+0.5       # EbN0 step
+5   	  # max EbN0
+-1   	  # channel type: -1=AWGN, 0=fast Rayleigh, 1=quasi-static Rayleigh,
+1   	  # path gain: source_destination
+1   	  # path gain: source_relay
+1   	  # path gain: relay_destination 
+

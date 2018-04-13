@@ -1,0 +1,40 @@
+\section{FILESERVICE Class Reference}
+\label{classFILESERVICE}\index{FILESERVICE@{FILESERVICE}}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FILESERVICE} ()\label{classFILESERVICE_67f21291e1a07057dcd4ca73ef918b8e}
+
+\begin{CompactList}\small\item\em Class Constructor, sets the {\em LENGTH\/} to 500;. \item\end{CompactList}\item 
+int {\bf scan\_\-integer} (FILE $\ast$InputFile)\label{classFILESERVICE_6938ce3ccef9338e9cd556efce20166a}
+
+\begin{CompactList}\small\item\em Scans an integer from the file {\bf InputFile}. \item\end{CompactList}\item 
+void {\bf scan\_\-text} (FILE $\ast$InputFile, char $\ast$text)\label{classFILESERVICE_b8ad626346c8b0a433f0ef5ae499b450}
+
+\begin{CompactList}\small\item\em Scans a string from the file {\bf InputFile} and stores in the string buffer {\bf text}. The length of the string is defined as LENGTH. \item\end{CompactList}\item 
+double {\bf scan\_\-double} (FILE $\ast$InputFile)\label{classFILESERVICE_2d304e19c22caf50349f6e12a3456053}
+
+\begin{CompactList}\small\item\em Scans a double from the file {\bf InputFile}. \item\end{CompactList}\item 
+unsigned long {\bf scan\_\-unsigned\_\-long} (FILE $\ast$InputFile)\label{classFILESERVICE_226289aac2788371909c841e10941e10}
+
+\begin{CompactList}\small\item\em Scans a unsigned long number from the file {\bf InputFile}. \item\end{CompactList}\item 
+int {\bf scan\_\-word} (int StartPosition, char $\ast$FileLine, char $\ast$text)\label{classFILESERVICE_40f12e95ef71688fdbacf30c7569c93a}
+
+\begin{CompactList}\small\item\em Scans a word from the string buffer {\bf FileLine}, the starting position will be {\bf StartPosition}, and store in {\bf text}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+int {\bf LENGTH}\label{classFILESERVICE_60ea57d8b8d01444a1ecaaa86ba0ecc4}
+
+\begin{CompactList}\small\item\em The length of the input string length. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 36 of file fileser.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf fileser.h}\item 
+fileser.cpp\end{CompactItemize}

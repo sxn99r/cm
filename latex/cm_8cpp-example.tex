@@ -1,0 +1,40 @@
+\section{cm.cpp}
+  
+
+ This class provides four coded modulation schemes: \begin{CompactItemize}
+\item 
+TCM, TTCM, BICM and BICMID.\end{CompactItemize}
+Modulation modes available are M-QAM and M-PSK, where {\em M=2$^\wedge$n} is the modulation level. We have:\begin{CompactItemize}
+\item 
+4-QAM, 16-QAM, 64-QAM\item 
+4-PSK, 8-PSK, 16-PSK, 64-PSK\end{CompactItemize}
+Interleaver types available are:\begin{CompactItemize}
+\item 
+symbol {\em interleaver} (ON, OFF) for TCM, TTCM\item 
+internal parallel bit interleavers for BICM and BICMID (always ON for BICM \& BICMID)\item 
+IQ {\em interleaver} (IQ\_\-INTLV) for TCM, TTCM, BICM, BICMID\end{CompactItemize}
+To set up a rate-3/4 ({\em k=3}, {\em n=4)} 16QAM TTCM having code memory 3, code termination, 4 turbo iteration, APPROX\_\-LOG\_\-MAP decoder, 100 coded symbols ({\em no\_\-of\_\-symbols)}, employ IQ-channel interleaver; the following code can be used: \footnotesize\begin{verbatim}  CM cm;
+  cm.set_parameters(TTCM,3,4,3,ON,4,APPROX_LOG_MAP,100,CQAM,IQ_INTLV);
+  cm.initialise();  \end{verbatim}\normalsize 
+ See {\bf cm\_\-test.cpp} for more details.
+
+\begin{Desc}
+\item[{\bf Warning: }]\par
+\begin{CompactItemize}
+\item 
+Modulation level = {\em 2$^\wedge$n}\item 
+Make sure that {\em n=k+1}; so that when compared CM to uncoded scheme\begin{enumerate}
+\item 
+the modulation level is doubled but \item 
+experience no bandwidth expansion\end{enumerate}
+\item 
+{\em no\_\-of\_\-info\_\-bits=no\_\-of\_\-info\_\-symbols$\ast$k}, where\begin{enumerate}
+\item 
+{\em no\_\-of\_\-info\_\-symbols=no\_\-of\_\-symbols} \par
+ if {\em Terminated=OFF} for all CM schemes\item 
+{\em no\_\-of\_\-info\_\-symbols=no\_\-of\_\-symbols-L} \par
+ if {\em Terminated=ON} for TCM, BICM \& BICMID\item 
+{\em no\_\-of\_\-info\_\-symbols=no\_\-of\_\-symbols-2$\ast$L} \par
+ if {\em Terminated=ON} for TTCM\end{enumerate}
+\end{CompactItemize}
+\end{Desc}

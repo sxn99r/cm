@@ -1,0 +1,13 @@
+!Coded Modulation:
+!  TTCM   (k=2, n=3), code memory=3, iteration number=4
+!  Decoder type: approximated Log MAP
+!  Gen_poly = 11 2 4 
+!  Code termination: ON
+!  Block length: output coded (modulated) symbol (1000), input data symbol (994)
+!  Modulation: 8-PSK Set Partition
+!  Turbo interleaver  : 1 odd-even separated random symbol interleaver of length 1000: Intlv.oes.1000
+!  Channel interleaver: 1 random symbol interleaver of length 1000: Intlv.1000
+!
+!EbN0(dB)	SNR(dB)		BER		FER		Frames
+5.000000	7.984164	0.000000e+00	0.000000e+00	100
+!Elapsed time = 2.225979 seconds

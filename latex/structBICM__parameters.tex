@@ -1,0 +1,59 @@
+\section{BICM\_\-parameters Struct Reference}
+\label{structBICM__parameters}\index{BICM_parameters@{BICM\_\-parameters}}
+struct of BICM for \doxyref{CM}{p.}{classCM}: rate-5/6 64QAM BICM employs puncturing on rate-1/2 mother code  
+
+
+{\tt \#include $<$cm.h$>$}
+
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+int {\bf k}\label{structBICM__parameters_51c47ef030ceb3d2d4b6fb4919e4195b}
+
+\begin{CompactList}\small\item\em length of dataword \item\end{CompactList}\item 
+int {\bf n}\label{structBICM__parameters_60f37ced606a639f4d34345987aedbef}
+
+\begin{CompactList}\small\item\em length of codeword \item\end{CompactList}\item 
+int {\bf L}\label{structBICM__parameters_46955a32706db04d189c9c58495dd24e}
+
+\begin{CompactList}\small\item\em code memory length \item\end{CompactList}\item 
+int {\bf M}\label{structBICM__parameters_40a609d22bc8609617c834f6f8170075}
+
+\begin{CompactList}\small\item\em code memory length for individual databit \item\end{CompactList}\item 
+int {\bf puncture\_\-code}\label{structBICM__parameters_ae730c590aa66cacd0e1b6679fdafc16}
+
+\begin{CompactList}\small\item\em apply puncturing code: OFF, ON \item\end{CompactList}\item 
+ivec {\bf puncture}\label{structBICM__parameters_27d08f4ad19efbd7f835c576747378d3}
+
+\begin{CompactList}\small\item\em puncturing pattern for 1/2-rate mother code \item\end{CompactList}\item 
+struct {\bf cm\_\-interleaver\_\-control} $\ast$$\ast$ {\bf bit\_\-interleaver}\label{structBICM__parameters_6dd83eec5e070c573115ef4a1956a96e}
+
+\begin{CompactList}\small\item\em parallel bit interleavers \item\end{CompactList}\item 
+int {\bf NoBranches}\label{structBICM__parameters_563f3e0bb2976d442fcb3f47ec9cf59b}
+
+\begin{CompactList}\small\item\em number of possible output trellis branches \item\end{CompactList}\item 
+int {\bf NoStates}\label{structBICM__parameters_c360fdbf8fb86032a0b1940b2d33634e}
+
+\begin{CompactList}\small\item\em number of possible trellis states \item\end{CompactList}\item 
+imat {\bf GenPoly}\label{structBICM__parameters_941dc32da40b25711e423075f0c2d3d3}
+
+\begin{CompactList}\small\item\em generator polynomiala \item\end{CompactList}\item 
+imat {\bf Lb}\label{structBICM__parameters_44447f493f450710d7631b630356983e}
+
+\begin{CompactList}\small\item\em codeword (trellis transition Label) table \item\end{CompactList}\item 
+imat {\bf Ns}\label{structBICM__parameters_42b9dd87177b363d0f9f1080c9ef432f}
+
+\begin{CompactList}\small\item\em Next state table. \item\end{CompactList}\item 
+imat {\bf Ps}\label{structBICM__parameters_695d18f2f2466cee40738ac39c60e501}
+
+\begin{CompactList}\small\item\em Previous state table. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+struct of BICM for \doxyref{CM}{p.}{classCM}: rate-5/6 64QAM BICM employs puncturing on rate-1/2 mother code 
+
+Definition at line 125 of file cm.h.
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf cm.h}\end{CompactItemize}

@@ -1,0 +1,1174 @@
+\section{CM Class Reference}
+\label{classCM}\index{CM@{CM}}
+\doxyref{CM}{p.}{classCM} Class.  
+
+
+{\tt \#include $<$cm.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf CM} ()\label{classCM_920d1ece9cc8790eb45aef64f4f2657f}
+
+\begin{CompactList}\small\item\em Class constructor. \item\end{CompactList}\item 
+{\bf $\sim$CM} ()\label{classCM_1193ea834eb9fef17f702b102f1dcab2}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+void {\bf set\_\-parameters\_\-from\_\-file} (char $\ast$fname)
+\begin{CompactList}\small\item\em Setup parameters for the \doxyref{CM}{p.}{classCM} encoder/decoder and also calculate the bit and symbol block lengths based on a control file. \item\end{CompactList}\item 
+void {\bf set\_\-parameters} (const int mode\_\-in, const int k\_\-in, const int n\_\-in, const int L\_\-in, const int Terminated\_\-in, const int iterations\_\-in, const int decoder\_\-type\_\-in, const int no\_\-of\_\-symbols\_\-in, const int modulation\_\-type\_\-in, const int interleaver\_\-mode\_\-in)
+\begin{CompactList}\small\item\em Setup parameters for the \doxyref{CM}{p.}{classCM} encoder/decoder and also calculate the bit and symbol block lengths. \item\end{CompactList}\item 
+void {\bf reset\_\-CM} (int new\_\-no\_\-of\_\-symbols)
+\begin{CompactList}\small\item\em reset symbol block length and interleaver for variable length coded modulation \item\end{CompactList}\item 
+void {\bf reset\_\-CM\_\-iteration} (int new\_\-iterations)
+\begin{CompactList}\small\item\em reset number of turbo iterations for variable-iterated TTCM and BICMID \item\end{CompactList}\item 
+void {\bf initialise} ()
+\begin{CompactList}\small\item\em Initialise \doxyref{CM}{p.}{classCM}: allocate memory and initialise coder, modulator ({\em modulation\/} ) \& {\em interleaver\/}. \item\end{CompactList}\item 
+int {\bf encode} (bvec b\_\-Input\_\-bits, ivec \&i\_\-Output\_\-symbols)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} encoder: encode and channel interleave. \item\end{CompactList}\item 
+int {\bf encode\_\-bits} (bvec b\_\-Input\_\-bits, ivec \&i\_\-Output\_\-bits)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} encoder: encode and channel interleave. \item\end{CompactList}\item 
+int {\bf decode} (bvec \&b\_\-decoded\_\-bits)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} decoder: channel deinterleave and decode. \item\end{CompactList}\item 
+vec {\bf decode} (bvec \&b\_\-decoded\_\-bits, vec cm\_\-apr\_\-databits\_\-llr)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} decoder: channel deinterleave and decode. \item\end{CompactList}\item 
+int {\bf decode\_\-using\_\-Pr} (bvec \&b\_\-decoded\_\-bits, mat {\bf Pr})
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} decoder: channel deinterleave and decode. \item\end{CompactList}\item 
+int {\bf decode\_\-using\_\-PrIQ} (bvec \&b\_\-decoded\_\-bits, mat {\bf PrI}, mat {\bf PrQ})
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} decoder: channel deinterleave and decode. \item\end{CompactList}\item 
+cvec {\bf modulate\_\-symbols} (ivec i\_\-encoded\_\-symbols)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} modulator. \item\end{CompactList}\item 
+void {\bf demodulate\_\-soft\_\-symbols} (cvec c\_\-received\_\-signals, double \_\-2sigma2)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} demodulator for AWGN channel. \item\end{CompactList}\item 
+void {\bf demodulate\_\-soft\_\-symbols} (cvec c\_\-received\_\-signals, cvec channel\_\-gains, double \_\-2sigma2)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel. \item\end{CompactList}\item 
+void {\bf demodulate\_\-soft\_\-symbols\_\-relay} (cvec c\_\-received\_\-signals, cvec channel\_\-gains, double \_\-2sigma2, vec beta, vec var\_\-n, vec pow\_\-s, vec mu\_\-n)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel in cooperative scheme: relay signals only. \item\end{CompactList}\item 
+void {\bf demodulate\_\-soft\_\-symbols\_\-relay} (cvec c\_\-received\_\-signals, cvec channel\_\-gains, double N0, cvec c\_\-received\_\-signals\_\-rd, cvec channel\_\-gains\_\-rd, double N0\_\-rd)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel in cooperative scheme: perfect relay. \item\end{CompactList}\item 
+void {\bf demodulate\_\-soft\_\-symbols\_\-relay} (cvec c\_\-received\_\-signals, cvec channel\_\-gains, double N0, cvec c\_\-received\_\-signals\_\-rd, cvec channel\_\-gains\_\-rd, double N0\_\-rd, vec beta, vec var\_\-n, vec pow\_\-s, vec mu\_\-n)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel in cooperative scheme: soft relay. \item\end{CompactList}\item 
+void {\bf demodulate\_\-soft\_\-symbols\_\-relay\_\-aaf} (cvec c\_\-received\_\-signals, cvec channel\_\-gains, double N0, cvec c\_\-received\_\-signals\_\-rd, cvec channel\_\-gains\_\-rd, double N0\_\-rd, cvec channel\_\-gains\_\-sr, vec factor)
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel in cooperative scheme: Amplify And Forward (AAF). \item\end{CompactList}\item 
+void {\bf decode\_\-symbol} (mat Apo, ivec \&symbols, int N, int M)
+\begin{CompactList}\small\item\em decode symbol based on symbol's a-poteriori probability \item\end{CompactList}\item 
+void {\bf print\_\-parameters} (FILE $\ast$fp)
+\begin{CompactList}\small\item\em print parameters to a file pointer. \item\end{CompactList}\item 
+void {\bf print\_\-parameters} (fstream \&fs)
+\begin{CompactList}\small\item\em print parameters to a file stream. \item\end{CompactList}\item 
+void {\bf print\_\-coding\_\-tables} (FILE $\ast$fp)
+\begin{CompactList}\small\item\em print coding tables to a file pointer. \item\end{CompactList}\item 
+void {\bf print\_\-coding\_\-tables} (fstream \&fs)
+\begin{CompactList}\small\item\em print coding tables to a file stream. \item\end{CompactList}\item 
+char $\ast$ {\bf get\_\-result\_\-filename} ()\label{classCM_53fd40743fff2612b4c76c2849747045}
+
+\begin{CompactList}\small\item\em return the result filename. \item\end{CompactList}\item 
+int {\bf get\_\-sym\_\-length} ()\label{classCM_bd32e09bfe42477474ceca5fe71d3a60}
+
+\begin{CompactList}\small\item\em return the output coded symbol vector length. \item\end{CompactList}\item 
+int {\bf get\_\-info\_\-sym\_\-length} ()\label{classCM_78a80fba2012ae007181dd7caf1fc902}
+
+\begin{CompactList}\small\item\em return the input data symbol vector length \item\end{CompactList}\item 
+int {\bf get\_\-coded\_\-bit\_\-length} ()\label{classCM_1c85314768e75aa9998d38e7eb97367a}
+
+\begin{CompactList}\small\item\em return the output coded bit vector length \item\end{CompactList}\item 
+int {\bf get\_\-info\_\-bit\_\-length} ()\label{classCM_87311b2d2127179cceb44d0e56246b78}
+
+\begin{CompactList}\small\item\em return the input data bit vector length \item\end{CompactList}\item 
+int {\bf get\_\-termination\_\-bit\_\-length} ()\label{classCM_f70cdf540be615cc55e4c6a23dcafc7e}
+
+\begin{CompactList}\small\item\em return the input data bit vector length \item\end{CompactList}\item 
+int {\bf get\_\-iterations} ()\label{classCM_0043f42dbab85ddef9c539117bb7906a}
+
+\begin{CompactList}\small\item\em return the number of turbo iterations \item\end{CompactList}\item 
+int {\bf get\_\-coder\_\-mode} ()\label{classCM_7fd604c8bc7d3d2357b1265379e26e5d}
+
+\begin{CompactList}\small\item\em return the coder mode \item\end{CompactList}\item 
+mat {\bf get\_\-Pr} ()\label{classCM_9b9ca315c2ee22385d8c099515c7e7a4}
+
+\begin{CompactList}\small\item\em return the channel symbol probability from demodulator. \item\end{CompactList}\item 
+mat {\bf get\_\-PrI} ()\label{classCM_d43dc25708f91b329acb69c72e8c8092}
+
+\begin{CompactList}\small\item\em return the In-phase channel symbol probability from demodulator. \item\end{CompactList}\item 
+mat {\bf get\_\-PrQ} ()\label{classCM_db6de5c8ede8a7759fb6353e3ba4a331}
+
+\begin{CompactList}\small\item\em return the Quadrature-phase channel symbol probability from demodulator. \item\end{CompactList}\item 
+mat {\bf get\_\-OPr} ()\label{classCM_d4724814f208088360db65be4cc532c1}
+
+\begin{CompactList}\small\item\em return the coded symbol a-posteriori probability after decoding \item\end{CompactList}\item 
+mat {\bf get\_\-normal\_\-domain\_\-OPr} ()\label{classCM_5d56eb9c6f7fafaa22e6dba5c5f0ee94}
+
+\begin{CompactList}\small\item\em return the coded symbol a-posteriori probability after decoding : normal domain \item\end{CompactList}\item 
+mat $\ast$ {\bf get\_\-Coded\_\-Bit\_\-OPr} ()\label{classCM_91233a6ddfaf06293fe4d5fabf9bfa86}
+
+\begin{CompactList}\small\item\em return the coded bits a-posteriori probability after decoding \item\end{CompactList}\item 
+mat $\ast$ {\bf get\_\-Data\_\-Bit\_\-OPr} ()\label{classCM_a3ec6eb153c133e4c06290ba7104f2dd}
+
+\begin{CompactList}\small\item\em return the data bits a-posteriori probability after decoding \item\end{CompactList}\item 
+double {\bf get\_\-coderate} ()\label{classCM_5dc623a98179d53e2b9591e44dd7bc55}
+
+\begin{CompactList}\small\item\em return the actual coding rate \item\end{CompactList}\item 
+int {\bf get\_\-info\_\-bps} ()\label{classCM_79196f9774480659de9f040ad62d6684}
+
+\begin{CompactList}\small\item\em return the number of information bits per modulated symbol \item\end{CompactList}\item 
+int {\bf get\_\-bps} ()\label{classCM_54c9d52a6cf19adabdf3d5b0cdfdc3d7}
+
+\begin{CompactList}\small\item\em return the number of bits per modulated symbol \item\end{CompactList}\item 
+double {\bf compute\_\-Eb} (double Es)\label{classCM_006e4de80d6c828ef6996cbfbfe0629b}
+
+\begin{CompactList}\small\item\em calculate SNR per databit Eb, given the symbol energy Es: $ Eb = Es/(R*BPS) $ where R=coderate, BPS=bits per modulated symbol. \item\end{CompactList}\item 
+vec {\bf get\_\-data\_\-llr} ()\label{classCM_770ef6ffbcb9711c3ba7d985044bcd7e}
+
+\begin{CompactList}\small\item\em calculate the aposteriori log likelihood ratio for each data bits after decoding \item\end{CompactList}\item 
+vec {\bf get\_\-data\_\-extr\_\-llr} ()\label{classCM_b46fae515598ced841f4c3f0a4a9e221}
+
+\item 
+cvec {\bf get\_\-SymbolMapping} ()\label{classCM_2f2a209ef2b06c1009877883a2e1eee8}
+
+\begin{CompactList}\small\item\em get the mapping table of the complex symbol \item\end{CompactList}\item 
+vec {\bf get\_\-SymbolMappingI} ()\label{classCM_f021d854e92d41a8b583e8dc92937b84}
+
+\begin{CompactList}\small\item\em get the In-phase mapping table of the complex symbol \item\end{CompactList}\item 
+vec {\bf get\_\-SymbolMappingQ} ()\label{classCM_4c77ca1b995b92837486355e47ecd9b1}
+
+\begin{CompactList}\small\item\em get the Quadrature-phase mapping table of the complex symbol \item\end{CompactList}\item 
+void {\bf SymProb\_\-to\_\-LLR} (int N, int bps, vec \&LLR, mat SymPr)\label{classCM_5569ca86a6477778032def0d5445e9df}
+
+\begin{CompactList}\small\item\em convertion of Symbol probability in Log domain to LLR \item\end{CompactList}\item 
+void {\bf LLR\_\-to\_\-SymProb} (int N, int bps, vec LLR, mat \&SymPr)\label{classCM_1ef87b00bca1af4ff1d38a09536fdc9e}
+
+\begin{CompactList}\small\item\em convertion of Log-Likelihood Ratio (LLR) to Symbol probability in Log domain \item\end{CompactList}\item 
+void {\bf LLR\_\-to\_\-Prob} (int N, int bps, vec LLR, mat $\ast$\&BitPr)\label{classCM_6a9d8bdc1e55b3b95806918e9e519e02}
+
+\begin{CompactList}\small\item\em convertion of Log-Likelihood Ratio (LLR) to Bit probability in Log domain \item\end{CompactList}\item 
+void {\bf Prob\_\-to\_\-LLR} (int N, int bps, vec \&LLR, mat $\ast$BitPr)\label{classCM_d2fccc0845278d65262583fd7dfc8239}
+
+\begin{CompactList}\small\item\em convertion of Bit probability in Log domain to LLR \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf allocate\_\-memory\_\-tcm} ()\label{classCM_f31ac624f05842365bff7b15b638086d}
+
+\begin{CompactList}\small\item\em allocate memory for TCM coder \item\end{CompactList}\item 
+void {\bf allocate\_\-memory\_\-ttcm} ()\label{classCM_e725738133869ec3e8686f6089e1a318}
+
+\begin{CompactList}\small\item\em allocate memory for TTCM coder \item\end{CompactList}\item 
+void {\bf allocate\_\-memory\_\-bicm} ()\label{classCM_589beb81c7801eff38cb92d25dc4e71c}
+
+\begin{CompactList}\small\item\em allocate memory for BICM/BICMID coder \item\end{CompactList}\item 
+void {\bf initModulation\_\-SP} ()\label{classCM_eacccf29b3db0f2f18992881aa85c53a}
+
+\begin{CompactList}\small\item\em initialise \doxyref{SP}{p.}{cm_8h_ecd69d9a67487cc45c38eb184c50538a} based modulator \item\end{CompactList}\item 
+void {\bf initModulation\_\-GRAY} ()\label{classCM_c42f5f0ff82e5e185a05e00d078315b7}
+
+\begin{CompactList}\small\item\em initialise \doxyref{GRAY}{p.}{cm_8h_e5f70677050eecd8909e0248e07b9e73} coded based modulator \item\end{CompactList}\item 
+void {\bf initTCM} ()\label{classCM_85054052f465445035f7636bc262b7cf}
+
+\begin{CompactList}\small\item\em initialise TCM/TTCM coder \item\end{CompactList}\item 
+void {\bf initCC} ()\label{classCM_dc081a74ed5436775efc0c5785eb343f}
+
+\begin{CompactList}\small\item\em initialise BICM coder (rate 1/2, 2/3 \& 3/4): non-binary Convolutional code \item\end{CompactList}\item 
+void {\bf initPunctureCC} ()\label{classCM_8d93259b30167732ba1c0ad8efc84c87}
+
+\begin{CompactList}\small\item\em initialise BICM coder (rate 5/6): employ puncturing on rate 1/2 mother code \item\end{CompactList}\item 
+void {\bf get\_\-gen\_\-poly} ()
+\begin{CompactList}\small\item\em get generator polynomial from a predefined table for TCM/TTCM \item\end{CompactList}\item 
+void {\bf get\_\-CC\_\-poly} ()
+\begin{CompactList}\small\item\em get generator polynomial and puncturing pattern from a predefined table for BICM/BICMID \item\end{CompactList}\item 
+void {\bf init\_\-channel\_\-interleaver} (int {\bf no\_\-of\_\-symbols})
+\begin{CompactList}\small\item\em initialise channel interleaver: symbol interleaver (ON, OFF) or IQ interleaver (IQ\_\-INTLV) \item\end{CompactList}\item 
+void {\bf free\_\-channel\_\-interleaver} ()\label{classCM_b6990819a0cff6728bc115e2ed06e829}
+
+\begin{CompactList}\small\item\em Free Channel Interleaver memory. \item\end{CompactList}\item 
+void {\bf init\_\-random\_\-interleaver} (int block\_\-length, ivec \&table, char $\ast$txt)\label{classCM_16a06bf78f4d299ff613c9089414e1c5}
+
+\begin{CompactList}\small\item\em initialise random interleaver \item\end{CompactList}\item 
+void {\bf init\_\-iq\_\-tables} ()\label{classCM_c257ddc14580935d938e1e9eae6e8c74}
+
+\begin{CompactList}\small\item\em initialise In-phase Quadrature-phase random interleaver \item\end{CompactList}\item 
+void {\bf get\_\-I\_\-table} ()\label{classCM_f73e5201f96d2d9ca1f61cdd335a12f4}
+
+\begin{CompactList}\small\item\em get In-phase table, used by \doxyref{init\_\-iq\_\-tables()}{p.}{classCM_c257ddc14580935d938e1e9eae6e8c74} \item\end{CompactList}\item 
+void {\bf get\_\-Q\_\-table} ()\label{classCM_51763ff2d197f6640b8c5a2dedaf23ff}
+
+\begin{CompactList}\small\item\em get Quadrature-phase table, used by \doxyref{init\_\-iq\_\-tables()}{p.}{classCM_c257ddc14580935d938e1e9eae6e8c74} \item\end{CompactList}\item 
+void {\bf init\_\-TTCM\_\-interleaver} ()\label{classCM_b624434cc6e9e7f0b7ba192826910c1b}
+
+\begin{CompactList}\small\item\em initialise TTCM interleaver: Odd Even Separated (oes) symbol intereaver \item\end{CompactList}\item 
+void {\bf init\_\-OES\_\-interleaver} (int block\_\-length, ivec \&i\_\-table)\label{classCM_9205f56b23edd4cf3675e49817113e01}
+
+\begin{CompactList}\small\item\em initialise Odd-Even-Separated symbol interleaver for TTCM \item\end{CompactList}\item 
+int {\bf intlv\_\-termination\_\-locat} (int block\_\-length, int {\bf L}, ivec \&i\_\-table, ivec \&last)\label{classCM_7c4dbbf388ad9cfc08478a78f00f920d}
+
+\begin{CompactList}\small\item\em find termination locations for 2nd encoder of TTCM used by \doxyref{init\_\-OES\_\-interleaver()}{p.}{classCM_9205f56b23edd4cf3675e49817113e01} \item\end{CompactList}\item 
+void {\bf TCMEnc} (ivec, ivec \&)\label{classCM_c77edcb0339ade8c584911cc8240b9e6}
+
+\begin{CompactList}\small\item\em TCM encoder. \item\end{CompactList}\item 
+void {\bf TurboTCMEnc} (ivec, ivec \&)\label{classCM_cd4675d4d2b857c9cd2463ff30a4bdbd}
+
+\begin{CompactList}\small\item\em TTCM encoder. \item\end{CompactList}\item 
+void {\bf BICMEnc} (ivec, ivec \&)\label{classCM_afe6bf0f1bbeb57ed0ec780d87117ce3}
+
+\begin{CompactList}\small\item\em BICM encoder. \item\end{CompactList}\item 
+void {\bf BICMEnc\_\-Puncture} (ivec, ivec \&)\label{classCM_f5b38f6f098ce71582ec76b01018a0b2}
+
+\begin{CompactList}\small\item\em punctured BICM encoder \item\end{CompactList}\item 
+double {\bf jacolog} (double x, double y)\label{classCM_c7c3756700a68090cd8babf90f1be005}
+
+\begin{CompactList}\small\item\em Jacobian logarithmic summation: based on the {\em decoder\_\-type\/} obtions. \item\end{CompactList}\item 
+void {\bf log\_\-mapdec} (int N, int M, int S, imat Ps, imat Ns, imat Lb, mat Apr, mat $\ast$Ip, mat \&Apo, mat \&{\bf OPr})
+\begin{CompactList}\small\item\em Logarithmic MAP decoder for TCM. \item\end{CompactList}\item 
+void {\bf log\_\-TTCM\_\-dec} (int N, int M, int S, imat Ps, imat Ns, imat Lb, mat Apr, mat $\ast$Ip1, mat $\ast$Ip2, mat \&Apo, mat \&{\bf OPr}, mat \&{\bf OPr2})
+\begin{CompactList}\small\item\em Logarithmic MAP decoder for TTCM, assumming no Apr information from other source. \item\end{CompactList}\item 
+void {\bf log\_\-TTCM\_\-dec\_\-apr} (int N, int M, int S, imat Ps, imat Ns, imat Lb, mat Apr, mat $\ast$Ip1, mat $\ast$Ip2, mat \&Apo, mat \&{\bf OPr}, mat \&{\bf OPr2})
+\begin{CompactList}\small\item\em Logarithmic MAP decoder for TTCM, can be used for joint \doxyref{CM}{p.}{classCM} and source coding where Apr is provided by the source decoder. \item\end{CompactList}\item 
+void {\bf SISO\_\-dec\_\-log} (int N, int lD, int D, int S, imat Ps, imat Ns, imat Lb, mat $\ast$Apr\_\-coded\_\-bit, mat $\ast$\&Apo\_\-coded\_\-bit, mat $\ast$\&Apo\_\-data\_\-bit, mat \&Apo\_\-dataword, int {\bf Terminated}, int frame\_\-index)
+\begin{CompactList}\small\item\em Logarithmic SISO(MAP) decoder for BICM. \item\end{CompactList}\item 
+void {\bf SISO\_\-dec\_\-log} (int N, int lD, int D, int S, imat Ps, imat Ns, imat Lb, mat Apr\_\-codeword, mat Apr\_\-dataword, mat \&Apo\_\-codeword, mat \&Apo\_\-dataword, int {\bf Terminated}, int frame\_\-index)
+\begin{CompactList}\small\item\em Logarithmic SISO(MAP) decoder for any coding scheme. \item\end{CompactList}\item 
+void {\bf BICM\_\-ID\_\-dec\_\-log} (int N, int lD, int D, int S, imat Ps, imat Ns, imat Lb, mat $\ast$Apr\_\-coded\_\-bit, mat $\ast$Apr\_\-data\_\-bit, mat $\ast$\&Apo\_\-coded\_\-bit, mat $\ast$\&Apo\_\-data\_\-bit, mat \&Apo\_\-dataword, int {\bf Terminated})
+\begin{CompactList}\small\item\em Logarithmic SISO(MAP) decoder for BICM/BICMID. \item\end{CompactList}\item 
+void {\bf BICM\_\-ID\_\-dec\_\-log\_\-pun} (int N, int lD, int D, int S, imat Ps, imat Ns, imat Lb, mat $\ast$Apr\_\-coded\_\-bit, mat $\ast$Apr\_\-data\_\-bit, mat $\ast$\&Apo\_\-coded\_\-bit, mat $\ast$\&Apo\_\-data\_\-bit, mat \&Apo\_\-dataword, int {\bf Terminated})
+\begin{CompactList}\small\item\em Logarithmic SISO(MAP) decoder for BICM/BICMID employing puncturing. \item\end{CompactList}\item 
+void {\bf extrinsic\_\-demod\_\-log} (int N, int lC, int C, mat $\ast$Apo\_\-coded\_\-bit, mat {\bf Pr}, mat $\ast$\&Extr\_\-coded\_\-bit, int frame\_\-index)
+\begin{CompactList}\small\item\em demodulator of BICMID which outputs the extrinsic probability of coded bits \item\end{CompactList}\item 
+void {\bf depuncture} (mat $\ast$Apr\_\-coded\_\-bit, mat $\ast$\&p\_\-Apr\_\-coded\_\-bit, int N, int dataword\_\-length, int codeword\_\-length, ivec puncture, int p\_\-lC, int frame\_\-index)
+\begin{CompactList}\small\item\em depuncturer for punctured BICM code \item\end{CompactList}\item 
+void {\bf puncture} (mat $\ast$\&Apo\_\-coded\_\-bit, mat $\ast$p\_\-Apo\_\-coded\_\-bit, int N, int dataword\_\-length, int codeword\_\-length, ivec puncture, int p\_\-lC, int frame\_\-index)
+\begin{CompactList}\small\item\em puncturer for punctured BICM code \item\end{CompactList}\item 
+void {\bf get\_\-Apo\_\-dataword} (mat \&Apo\_\-dataword, mat $\ast$\&Apo\_\-data\_\-bit, mat $\ast$p\_\-Apo\_\-data\_\-bit, int N, int dataword\_\-length, int p\_\-lD)
+\begin{CompactList}\small\item\em calculate dataword's and databit's a-posteriori probability from coded bit's a-posteriori probability of decoder \item\end{CompactList}\item 
+void {\bf get\_\-p\_\-Apr\_\-data\_\-bit} (mat $\ast$\&p\_\-Apr\_\-data\_\-bit, mat $\ast$Apr\_\-data\_\-bit, int N, int dataword\_\-length, int p\_\-lD)
+\begin{CompactList}\small\item\em calculate the databit's a-priori probability for punctured BICM decoding \item\end{CompactList}\item 
+void {\bf intlvi} (ivec x, ivec \&y, int block\_\-length, ivec i\_\-table)\label{classCM_7400d5b98d49e2aa21c2e5477f0af079}
+
+\begin{CompactList}\small\item\em interleaving integer vector of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf de\_\-intlvi} (ivec x, ivec \&y, int block\_\-length, ivec i\_\-table)\label{classCM_ce5a07f5fb22061b4ebaeced32fae1a0}
+
+\begin{CompactList}\small\item\em deinterleaving integer vector of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf intlvd\_\-2d} (mat x, mat \&y, int block\_\-length, ivec i\_\-table)\label{classCM_add18eccef5ba92f08d4b7c60ab18e6e}
+
+\begin{CompactList}\small\item\em interleaving double matrix (2-dimension) of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf de\_\-intlvd\_\-2d} (mat x, mat \&y, int block\_\-length, ivec i\_\-table)\label{classCM_164c4d54fa4ca66a9efd668c1d886aaa}
+
+\begin{CompactList}\small\item\em deinterleaving double matrix (2-dimension) of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf intlvm\_\-3d} (mat $\ast$x, mat $\ast$\&y, int block\_\-length, ivec i\_\-table)\label{classCM_958bc0a7b92dce8c532316e9aecb33ca}
+
+\begin{CompactList}\small\item\em interleaving double $\ast$matrix (3-dimension) of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf de\_\-intlvm\_\-3d} (mat $\ast$x, mat $\ast$\&y, int block\_\-length, ivec i\_\-table)\label{classCM_fd9703820b7a246c5d0f4964755e211c}
+
+\begin{CompactList}\small\item\em deinterleaving double $\ast$matrix (3-dimension) of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf bit\_\-intlvi} (imat x, imat \&y, int block\_\-length, ivec i\_\-table, int index)\label{classCM_2ef75b45c2225c316d31500b164fdd8f}
+
+\begin{CompactList}\small\item\em interleaving index-th bit's integer vector (row of imat) of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf bit\_\-de\_\-intlvi} (imat x, imat \&y, int block\_\-length, ivec i\_\-table, int index)\label{classCM_60b5dc5da94d6046fa91258514efc0e3}
+
+\begin{CompactList}\small\item\em deinterleaving index-th bit's integer vector (row of imat) of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf bit\_\-intlvm\_\-3d} (mat $\ast$x, mat $\ast$\&y, int block\_\-length, int m, ivec i\_\-table, int index)\label{classCM_3be0c47d9a050e4cbc9a96c9b2f81ee5}
+
+\begin{CompactList}\small\item\em interleaving index-th bit's double $\ast$matrix (3-dimension) of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf bit\_\-de\_\-intlvm\_\-3d} (mat $\ast$x, mat $\ast$\&y, int block\_\-length, int m, ivec i\_\-table, int index)\label{classCM_3e49488fa709b175e37a70e733d0c22b}
+
+\begin{CompactList}\small\item\em deinterleaving index-th bit's double $\ast$matrix (3-dimension) of length block\_\-length based on i\_\-table \item\end{CompactList}\item 
+void {\bf iq\_\-intlvc} (cvec x, cvec \&y, int block\_\-length, ivec i\_\-table, ivec q\_\-table)\label{classCM_37ed5e996fe8dc6829c16c61735a3b1f}
+
+\begin{CompactList}\small\item\em interleaving In-phase and Quadrature-phase of a complex vector \item\end{CompactList}\item 
+void {\bf iq\_\-de\_\-intlvc} (cvec x, cvec \&y, int block\_\-length, ivec i\_\-table, ivec q\_\-table)\label{classCM_2b126353a313093b5f4458c81f4ab1d1}
+
+\begin{CompactList}\small\item\em deinterleaving In-phase and Quadrature-phase of a complex vector \item\end{CompactList}\item 
+void {\bf demodulate\_\-soft\_\-symbols\_\-IQ} (cvec c\_\-received\_\-signals, double \_\-2sigma2)\label{classCM_c9cc0a9961b2aadc33d415dcd6d9fdde}
+
+\begin{CompactList}\small\item\em IQ demodulator for AWGN channel based on complex received\_\-signals and 2$\ast$sigma$^\wedge$2. {\em PrI\/}, {\em PrQ\/} and {\em Pr\/} are updated. \item\end{CompactList}\item 
+void {\bf demodulate\_\-soft\_\-symbols\_\-IQ} (cvec c\_\-received\_\-signals, cvec channel\_\-gains, double \_\-2sigma2)\label{classCM_6be058a29bd7e1f684a4afc113428414}
+
+\begin{CompactList}\small\item\em IQ demodulator for flat Rayleigh fading channel based on complex received\_\-signals and 2$\ast$sigma$^\wedge$2. {\em PrI\/}, {\em PrQ\/} and {\em Pr\/} are updated. \item\end{CompactList}\item 
+void {\bf compute\_\-Pr\_\-from\_\-PrIQ} (mat \&{\bf Pr}, mat {\bf PrI}, mat {\bf PrQ})\label{classCM_743dc5906fc7331d43ebe376dfa9f6ce}
+
+\begin{CompactList}\small\item\em computing {\em Pr\/} from {\em PrI\/} and {\em PrQ\/} \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+mat {\bf Pr}\label{classCM_97269e99c0d75779addc822f3c8cb2e0}
+
+\begin{CompactList}\small\item\em channel symbol probability from demodulator \item\end{CompactList}\item 
+mat {\bf OPr}\label{classCM_458c505a9ceacd3f4b9a67b10c3dfbb8}
+
+\begin{CompactList}\small\item\em coded symbol a-posteriori probability after decoding \item\end{CompactList}\item 
+mat {\bf OPr2}\label{classCM_5a26106cebc1178c907b338dbb7623ca}
+
+\begin{CompactList}\small\item\em coded symbol a-posteriori probability after decoding of second decoder (for TTCM) \item\end{CompactList}\item 
+mat {\bf PrI}\label{classCM_e8027ecdb044b8f49d07561e97ff72aa}
+
+\begin{CompactList}\small\item\em In-phase channel symbol probability from demodulator. \item\end{CompactList}\item 
+mat {\bf PrQ}\label{classCM_3287ddd04b611f6577473ca37e7bb3e9}
+
+\begin{CompactList}\small\item\em Quadrature-phase channel symbol probability from demodulator. \item\end{CompactList}\item 
+struct {\bf modulation\_\-param} $\ast$ {\bf modulation}\label{classCM_066a006a3b8fb29029402034040c690d}
+
+\begin{CompactList}\small\item\em modulator of \doxyref{CM}{p.}{classCM} \item\end{CompactList}\item 
+struct {\bf cm\_\-interleaver\_\-control} $\ast$ {\bf interleaver}\label{classCM_417a6482d6563dfffe840c3f65a67089}
+
+\begin{CompactList}\small\item\em interleaver of \doxyref{CM}{p.}{classCM} \item\end{CompactList}\item 
+struct {\bf TCM\_\-parameters} $\ast$ {\bf tcm}\label{classCM_e26af06d93b6c58917395e67e9d92724}
+
+\begin{CompactList}\small\item\em TCM of \doxyref{CM}{p.}{classCM}. \item\end{CompactList}\item 
+struct {\bf TTCM\_\-parameters} $\ast$ {\bf ttcm}\label{classCM_9d3242d63fe32dfbdc27fda07244b0c4}
+
+\begin{CompactList}\small\item\em TTCM of \doxyref{CM}{p.}{classCM}. \item\end{CompactList}\item 
+struct {\bf MAP\_\-dec} $\ast$ {\bf map}\label{classCM_d01ca5a0b728991c66dfcab6bee9aa0f}
+
+\begin{CompactList}\small\item\em MAP decoder for TCM and TTCM. \item\end{CompactList}\item 
+struct {\bf BICM\_\-parameters} $\ast$ {\bf bicm}\label{classCM_00b7133964e1760b494af73abcc06de7}
+
+\begin{CompactList}\small\item\em BICM of \doxyref{CM}{p.}{classCM}. \item\end{CompactList}\item 
+struct {\bf BICMID\_\-parameters} $\ast$ {\bf bicmid}\label{classCM_3bc72a036f0a25fb1d7a9a934b257ee3}
+
+\begin{CompactList}\small\item\em BICMID of \doxyref{CM}{p.}{classCM}. \item\end{CompactList}\item 
+struct {\bf SISO\_\-dec} $\ast$ {\bf siso}\label{classCM_168dc927399fe1466d4b66f8b62a0bef}
+
+\begin{CompactList}\small\item\em SISO decoder for BICM and BICMID. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf Pr\_\-to\_\-BitPr\_\-log} (int N, int lM, mat {\bf Pr}, mat $\ast$\&BitPr, int frame\_\-index)\label{classCM_7e92b923d0a82d8a70ec61963789e8e5}
+
+\begin{CompactList}\small\item\em Log-domain: compute bit probability BitPr from symbol probability Pr; N=total symbol, lM=bit per modulated symbol. \item\end{CompactList}\item 
+void {\bf BitPr\_\-to\_\-Pr\_\-log} (int N, int lM, mat \&{\bf Pr}, mat $\ast$BitPr, int frame\_\-index)\label{classCM_8b922f6f9e2a84b1bdb82de5b7dae28d}
+
+\begin{CompactList}\small\item\em Log-domain: compute symbol probability Pr from bit probability BitPr; N=total symbol, lM=bit per modulated symbol. \item\end{CompactList}\item 
+void {\bf symbol\_\-to\_\-bits} (int word\_\-length, int block\_\-length, ivec symbols, imat \&bits\_\-block)\label{classCM_06a068df3c501dc0309166af6348a273}
+
+\begin{CompactList}\small\item\em compute bit matrix (bits\_\-block) from symbol vector (symbol); word\_\-length=col block\_\-length=row of bits\_\-block \item\end{CompactList}\item 
+void {\bf bits\_\-to\_\-symbol} (int word\_\-length, int block\_\-length, imat bits\_\-block, ivec \&symbols)\label{classCM_af63a7c6fa7c702a810971a37f75781f}
+
+\begin{CompactList}\small\item\em compute symbol vector (symbol) from bit matrix (bits\_\-block); word\_\-length=col block\_\-length=row of bits\_\-block \item\end{CompactList}\item 
+ivec {\bf symbol\_\-to\_\-bits\_\-seq} (int word\_\-length, int block\_\-length, ivec symbols)\label{classCM_01c303cffd720addc04fe69558da4d58}
+
+\begin{CompactList}\small\item\em compute bit vector of length=block\_\-length$\ast$word\_\-length from symbol vector \item\end{CompactList}\item 
+ivec {\bf bits\_\-seq\_\-to\_\-symbol} (int word\_\-length, int block\_\-length, ivec bits\_\-seq)\label{classCM_247ed2c6b20a76ec4defb5147b5f8e84}
+
+\begin{CompactList}\small\item\em compute symbol vector from bit vector of length=block\_\-length$\ast$word\_\-length \item\end{CompactList}\item 
+void {\bf s\_\-error} (const char $\ast$message)\label{classCM_056d04fb04d5163e65bdaf07a56be512}
+
+\begin{CompactList}\small\item\em printout error message and exit \item\end{CompactList}\item 
+void {\bf makebits} (int s, int N, imat \&bit1, imat \&bit2)\label{classCM_f1f1510e1aaa487c5b003d5c69e93089}
+
+\begin{CompactList}\small\item\em Set Partitioning labelling for QAM. \item\end{CompactList}\item 
+double {\bf correct\_\-rounding\_\-error} (double distance)\label{classCM_8f983e7e7c6334a8985ac8cc3a2d4e7b}
+
+\begin{CompactList}\small\item\em correct rounding error to the precision of 6 decimal places \item\end{CompactList}\item 
+int {\bf octal\_\-to\_\-decimal} (int gen)\label{classCM_4c3e91eb1b23cb1676f68e0b1b89c788}
+
+\begin{CompactList}\small\item\em compute decimal number from octal number \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+char {\bf result\_\-filename} [500]\label{classCM_3e8e94cbe17d128dff2cac81116d10d6}
+
+\begin{CompactList}\small\item\em name of result file \item\end{CompactList}\item 
+int {\bf mode}\label{classCM_5d6dac25e59e93c5bd813ffaad7acddb}
+
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} mode: \doxyref{TCM}{p.}{cm_8h_33275405824294f33926d36091cc4d27}, \doxyref{TTCM}{p.}{cm_8h_ad4bfaba09cc6a6f69d2a48fa0423110}, \doxyref{BICM}{p.}{cm_8h_1218f70f86ea4acd32d0b58267a37b30}, \doxyref{BICMID}{p.}{cm_8h_68291ce81955ca351b54cc17eed37a7b}. \item\end{CompactList}\item 
+int {\bf modulation\_\-type}\label{classCM_918094ecd572ff09817c1b03a9b4b492}
+
+\begin{CompactList}\small\item\em modulation type: \doxyref{CPSK}{p.}{cm_8h_07f2a000bb7ecef9011cdc5a02658cce}, \doxyref{CQAM}{p.}{cm_8h_53b2e3c18e665091f2d8a3aa4bd9e68c} \item\end{CompactList}\item 
+int {\bf interleaver\_\-mode}\label{classCM_443c9dc661dff7754acbf9cb72384fbc}
+
+\begin{CompactList}\small\item\em interleaver mode: \doxyref{OFF}{p.}{cm_8h_29e413f6725b2ba32d165ffaa35b01e5}, \doxyref{ON}{p.}{cm_8h_d76d1750a6cdeebd506bfcd6752554d2}, \doxyref{IQ\_\-INTLV}{p.}{cm_8h_0e8351180111f8b1e0bf7c7484154684} \item\end{CompactList}\item 
+int {\bf Terminated}\label{classCM_7790cfced839887aaa260e7bf5f5754f}
+
+\begin{CompactList}\small\item\em code termination: \doxyref{OFF}{p.}{cm_8h_29e413f6725b2ba32d165ffaa35b01e5}, \doxyref{ON}{p.}{cm_8h_d76d1750a6cdeebd506bfcd6752554d2} \item\end{CompactList}\item 
+int {\bf decoder\_\-type}\label{classCM_47cb0811e050a75ef8f9c7c242c674d8}
+
+\begin{CompactList}\small\item\em decoding type: \doxyref{CM\_\-EXACT\_\-LOG\_\-MAP}{p.}{cm_8h_153b4193dd1c76575af0d2e1f56c9ba5}, \doxyref{CM\_\-APPROX\_\-LOG\_\-MAP}{p.}{cm_8h_7eb345f72a74fb180af11b6a150488cf}, \doxyref{CM\_\-MAX\_\-LOG\_\-MAP}{p.}{cm_8h_f071e75e173cacdf76de0b0e09a0e635} \item\end{CompactList}\item 
+int {\bf k}\label{classCM_784940b96525891050e3a201352f79c3}
+
+\begin{CompactList}\small\item\em length of dataword \item\end{CompactList}\item 
+int {\bf n}\label{classCM_cdf1281b8996f36c1bf5379ab050edde}
+
+\begin{CompactList}\small\item\em length of codeword \item\end{CompactList}\item 
+int {\bf L}\label{classCM_0e1fcde593848ecc7c6679957e710f13}
+
+\begin{CompactList}\small\item\em code memory length \item\end{CompactList}\item 
+int {\bf iterations}\label{classCM_8c4298c238f4a0b305d676fd40c4e19f}
+
+\begin{CompactList}\small\item\em number of turbo iterations \item\end{CompactList}\item 
+int {\bf max\_\-no\_\-of\_\-symbols}\label{classCM_78f10b25c5984320a57abc4c2a86bd0a}
+
+\begin{CompactList}\small\item\em maximum number of coded symbols in a block, for variable length \doxyref{CM}{p.}{classCM} \item\end{CompactList}\item 
+int {\bf no\_\-of\_\-symbols}\label{classCM_e6e50f065d3c2ee1535f4d756886990f}
+
+\begin{CompactList}\small\item\em number of coded symbols in a block \item\end{CompactList}\item 
+int {\bf no\_\-of\_\-info\_\-symbols}\label{classCM_ade4c2a52115f373d5aa82c6508c5ad5}
+
+\begin{CompactList}\small\item\em number of information (input data) symbols in one block \item\end{CompactList}\item 
+int {\bf no\_\-of\_\-coded\_\-bits}\label{classCM_dd570e5979ab3470edd46258ed1542a7}
+
+\begin{CompactList}\small\item\em number of output coded bits in one block \item\end{CompactList}\item 
+int {\bf no\_\-of\_\-info\_\-bits}\label{classCM_7c12d6763c1ed4ae4b875ff893411bbe}
+
+\begin{CompactList}\small\item\em number of information (input data) bits in one block \item\end{CompactList}\item 
+int {\bf no\_\-of\_\-tail\_\-bits}\label{classCM_4359c4bbccbf78b0ac5273a9260d18ff}
+
+\begin{CompactList}\small\item\em number of termination (tail) bits in one block \item\end{CompactList}\item 
+int {\bf no\_\-of\_\-input\_\-bits}\label{classCM_519e7183ad1c527ef97fdca759608468}
+
+\begin{CompactList}\small\item\em number of input bits ({\em no\_\-of\_\-info\_\-bits\/} + {\em no\_\-of\_\-tail\_\-bits\/} ) in one block \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{CM}{p.}{classCM} Class. 
+
+This class provides four coded modulation schemes:\begin{itemize}
+\item \doxyref{TCM}{p.}{cm_8h_33275405824294f33926d36091cc4d27}, \doxyref{TTCM}{p.}{cm_8h_ad4bfaba09cc6a6f69d2a48fa0423110}, \doxyref{BICM}{p.}{cm_8h_1218f70f86ea4acd32d0b58267a37b30} and \doxyref{BICMID}{p.}{cm_8h_68291ce81955ca351b54cc17eed37a7b}.\end{itemize}
+
+
+Modulation modes available are M-QAM and M-PSK, where {\em M=2$^\wedge$n\/} is the modulation level. We have:\begin{itemize}
+\item 4-QAM, 16-QAM, 64-QAM (\doxyref{CQAM}{p.}{cm_8h_53b2e3c18e665091f2d8a3aa4bd9e68c})\item 4-PSK, 8-PSK, 16-PSK, 64-PSK (\doxyref{CPSK}{p.}{cm_8h_07f2a000bb7ecef9011cdc5a02658cce})\end{itemize}
+
+
+Interleaver types available are:\begin{itemize}
+\item symbol {\em interleaver\/} (\doxyref{ON}{p.}{cm_8h_d76d1750a6cdeebd506bfcd6752554d2}, \doxyref{OFF}{p.}{cm_8h_29e413f6725b2ba32d165ffaa35b01e5}) for TCM, TTCM\item internal parallel bit interleavers for \doxyref{BICM}{p.}{cm_8h_1218f70f86ea4acd32d0b58267a37b30} and \doxyref{BICMID}{p.}{cm_8h_68291ce81955ca351b54cc17eed37a7b} (always \doxyref{ON}{p.}{cm_8h_d76d1750a6cdeebd506bfcd6752554d2} for \doxyref{BICM}{p.}{cm_8h_1218f70f86ea4acd32d0b58267a37b30} \& \doxyref{BICMID}{p.}{cm_8h_68291ce81955ca351b54cc17eed37a7b})\item IQ {\em interleaver\/} (\doxyref{IQ\_\-INTLV}{p.}{cm_8h_0e8351180111f8b1e0bf7c7484154684}) for TCM, TTCM, BICM, BICMID\end{itemize}
+
+
+Decoding in logarithmic domain is performed: {\em decoder\_\-type\/} available are \doxyref{CM\_\-EXACT\_\-LOG\_\-MAP}{p.}{cm_8h_153b4193dd1c76575af0d2e1f56c9ba5}, \doxyref{CM\_\-APPROX\_\-LOG\_\-MAP}{p.}{cm_8h_7eb345f72a74fb180af11b6a150488cf}, \doxyref{CM\_\-MAX\_\-LOG\_\-MAP}{p.}{cm_8h_f071e75e173cacdf76de0b0e09a0e635}.
+
+To set up a rate-3/4 ({\em k=3\/}, {\em n=4\/}) 16QAM TTCM having code memory 3, code termination, 4 turbo iteration, \doxyref{CM\_\-APPROX\_\-LOG\_\-MAP}{p.}{cm_8h_7eb345f72a74fb180af11b6a150488cf} decoder, 100 coded symbols ({\em no\_\-of\_\-symbols\/}), employ IQ-channel interleaver; the following code can be used: 
+
+\begin{Code}\begin{verbatim}  CM cm;
+  cm.set_parameters(TTCM,3,4,3,ON,4,CM_APPROX_LOG_MAP,100,CQAM,IQ_INTLV);
+  cm.initialise();
+\end{verbatim}
+\end{Code}
+
+ See \doxyref{cm\_\-test.cpp}{p.}{cm__test_8cpp} for more details.
+
+\begin{Desc}
+\item[Warning:]\begin{itemize}
+\item Modulation level = {\em 2$^\wedge$n\/} \item Make sure that {\em n=k+1\/}; so that when compared \doxyref{CM}{p.}{classCM} to uncoded scheme\begin{enumerate}
+\item the modulation level is doubled but\item experience no bandwidth expansion\end{enumerate}
+\item {\em no\_\-of\_\-info\_\-bits=no\_\-of\_\-info\_\-symbols$\ast$k\/}, where\begin{enumerate}
+\item {\em no\_\-of\_\-info\_\-symbols=no\_\-of\_\-symbols\/} \par
+ if {\em Terminated=OFF\/} for all \doxyref{CM}{p.}{classCM} schemes\item {\em no\_\-of\_\-info\_\-symbols=no\_\-of\_\-symbols-L\/} \par
+ if {\em Terminated=ON\/} for TCM, BICM \& BICMID\item {\em no\_\-of\_\-info\_\-symbols=no\_\-of\_\-symbols-2$\ast$L\/} \par
+ if {\em Terminated=ON\/} for TTCM \end{enumerate}
+\end{itemize}
+\end{Desc}
+
+
+Definition at line 216 of file cm.h.
+
+\subsection{Member Function Documentation}
+\index{CM@{CM}!set_parameters_from_file@{set\_\-parameters\_\-from\_\-file}}
+\index{set_parameters_from_file@{set\_\-parameters\_\-from\_\-file}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::set\_\-parameters\_\-from\_\-file (char $\ast$ {\em fname})}\label{classCM_5db60ab0d3d824933eab650c4297514a}
+
+
+Setup parameters for the \doxyref{CM}{p.}{classCM} encoder/decoder and also calculate the bit and symbol block lengths based on a control file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em fname}]the control file name.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]after reading the parameters from a control file, \doxyref{set\_\-parameters()}{p.}{classCM_6ef77a946795b1cda87b5e4873f59c79} will be called. \end{Desc}
+
+
+Definition at line 53 of file cm.cpp.
+
+References result\_\-filename, FILESERVICE::scan\_\-integer(), FILESERVICE::scan\_\-text(), and set\_\-parameters().
+
+Referenced by main().\index{CM@{CM}!set_parameters@{set\_\-parameters}}
+\index{set_parameters@{set\_\-parameters}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::set\_\-parameters (const int {\em mode\_\-in}, const int {\em k\_\-in}, const int {\em n\_\-in}, const int {\em L\_\-in}, const int {\em Terminated\_\-in}, const int {\em iterations\_\-in}, const int {\em decoder\_\-type\_\-in}, const int {\em no\_\-of\_\-symbols\_\-in}, const int {\em modulation\_\-type\_\-in}, const int {\em interleaver\_\-mode\_\-in})}\label{classCM_6ef77a946795b1cda87b5e4873f59c79}
+
+
+Setup parameters for the \doxyref{CM}{p.}{classCM} encoder/decoder and also calculate the bit and symbol block lengths. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em mode\_\-in}]\doxyref{CM.mode}{p.}{classCM_5d6dac25e59e93c5bd813ffaad7acddb}: \doxyref{TCM}{p.}{cm_8h_33275405824294f33926d36091cc4d27}, \doxyref{TTCM}{p.}{cm_8h_ad4bfaba09cc6a6f69d2a48fa0423110}, \doxyref{BICM}{p.}{cm_8h_1218f70f86ea4acd32d0b58267a37b30}, \doxyref{BICMID}{p.}{cm_8h_68291ce81955ca351b54cc17eed37a7b} \item[{\em k\_\-in}]dataword length \item[{\em n\_\-in}]codeword length \item[{\em L\_\-in}]code memory length \item[{\em Terminated\_\-in}]code termination: \doxyref{OFF}{p.}{cm_8h_29e413f6725b2ba32d165ffaa35b01e5}, \doxyref{ON}{p.}{cm_8h_d76d1750a6cdeebd506bfcd6752554d2} \item[{\em iterations\_\-in}]turbo iteration number, for \doxyref{TTCM}{p.}{cm_8h_ad4bfaba09cc6a6f69d2a48fa0423110} and \doxyref{BICMID}{p.}{cm_8h_68291ce81955ca351b54cc17eed37a7b} \item[{\em decoder\_\-type\_\-in}]decoding type: \doxyref{CM\_\-EXACT\_\-LOG\_\-MAP}{p.}{cm_8h_153b4193dd1c76575af0d2e1f56c9ba5}, \doxyref{CM\_\-APPROX\_\-LOG\_\-MAP}{p.}{cm_8h_7eb345f72a74fb180af11b6a150488cf}, \doxyref{CM\_\-MAX\_\-LOG\_\-MAP}{p.}{cm_8h_f071e75e173cacdf76de0b0e09a0e635} \item[{\em no\_\-of\_\-symbols\_\-in}]number of coded symbols in a block \item[{\em modulation\_\-type\_\-in}]modulator type: \doxyref{CPSK}{p.}{cm_8h_07f2a000bb7ecef9011cdc5a02658cce}, \doxyref{CQAM}{p.}{cm_8h_53b2e3c18e665091f2d8a3aa4bd9e68c} \item[{\em interleaver\_\-mode\_\-in}]interleaver mode: \doxyref{OFF}{p.}{cm_8h_29e413f6725b2ba32d165ffaa35b01e5}, \doxyref{ON}{p.}{cm_8h_d76d1750a6cdeebd506bfcd6752554d2}, \doxyref{IQ\_\-INTLV}{p.}{cm_8h_0e8351180111f8b1e0bf7c7484154684} (internal bit interleaver for \doxyref{BICM}{p.}{cm_8h_1218f70f86ea4acd32d0b58267a37b30} or \doxyref{BICMID}{p.}{cm_8h_68291ce81955ca351b54cc17eed37a7b} is always \doxyref{ON}{p.}{cm_8h_d76d1750a6cdeebd506bfcd6752554d2})\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Warning:]\begin{itemize}
+\item Modulation level = $ 2^{n\_in} $\item Make sure that {\em n\_\-in=k\_\-in+1\/}; so that when compared \doxyref{CM}{p.}{classCM} to uncoded scheme\begin{enumerate}
+\item the modulation level is doubled but\item experience no bandwidth expansion\end{enumerate}
+\end{itemize}
+\end{Desc}
+\begin{Desc}
+\item[Note:]\begin{itemize}
+\item {\em k=k\_\-in\/}, {\em n=n\_\-in\/}, {\em L=L\_\-in\/} \item if {\em Terminated\/} is OFF:\begin{enumerate}
+\item {\em no\_\-of\_\-info\_\-symbols=no\_\-of\_\-symbols\_\-in\/} \end{enumerate}
+\item if {\em Terminated\/} is ON:\begin{enumerate}
+\item {\em no\_\-of\_\-info\_\-symbols=no\_\-of\_\-symbols\_\-in-2$\ast$L\/} (TTCM)\item {\em no\_\-of\_\-info\_\-symbols=no\_\-of\_\-symbols\_\-in-L\/} (TCM, BICM \& BICMID)\end{enumerate}
+\item {\em no\_\-of\_\-info\_\-bits=no\_\-of\_\-info\_\-symbols$\ast$k\/} \item {\em no\_\-of\_\-coded\_\-bits=no\_\-of\_\-symbols$\ast$n\/} \item {\em no\_\-of\_\-tail\_\-bits=\/}(no\_\-of\_\-symbols-no\_\-of\_\-info\_\-symbols)$\ast$k \end{itemize}
+\end{Desc}
+
+
+Definition at line 79 of file cm.cpp.
+
+References BICM, BICMID, CM\_\-APPROX\_\-LOG\_\-MAP, CM\_\-EXACT\_\-LOG\_\-MAP, CM\_\-MAX\_\-LOG\_\-MAP, CPSK, CQAM, decoder\_\-type, interleaver\_\-mode, IQ\_\-INTLV, iterations, k, L, max\_\-no\_\-of\_\-symbols, mode, modulation\_\-type, n, no\_\-of\_\-coded\_\-bits, no\_\-of\_\-info\_\-bits, no\_\-of\_\-info\_\-symbols, no\_\-of\_\-input\_\-bits, no\_\-of\_\-symbols, no\_\-of\_\-tail\_\-bits, OFF, ON, s\_\-error(), TCM, Terminated, and TTCM.
+
+Referenced by set\_\-parameters\_\-from\_\-file().\index{CM@{CM}!reset_CM@{reset\_\-CM}}
+\index{reset_CM@{reset\_\-CM}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::reset\_\-CM (int {\em new\_\-no\_\-of\_\-symbols})}\label{classCM_5b66718eb106e261ae744200366ecabd}
+
+
+reset symbol block length and interleaver for variable length coded modulation 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em new\_\-no\_\-of\_\-symbols}]new symbol block length ( $<$= {\em max\_\-no\_\-of\_\-symbols\/}). \end{description}
+\end{Desc}
+
+
+Definition at line 2032 of file cm.cpp.
+
+References free\_\-channel\_\-interleaver(), init\_\-channel\_\-interleaver(), init\_\-TTCM\_\-interleaver(), TTCM\_\-parameters::interleaver, k, L, cm\_\-interleaver\_\-control::length, max\_\-no\_\-of\_\-symbols, mode, n, no\_\-of\_\-coded\_\-bits, no\_\-of\_\-info\_\-bits, no\_\-of\_\-info\_\-symbols, no\_\-of\_\-input\_\-bits, no\_\-of\_\-symbols, no\_\-of\_\-tail\_\-bits, s\_\-error(), cm\_\-interleaver\_\-control::table, Terminated, ttcm, and TTCM.\index{CM@{CM}!reset_CM_iteration@{reset\_\-CM\_\-iteration}}
+\index{reset_CM_iteration@{reset\_\-CM\_\-iteration}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::reset\_\-CM\_\-iteration (int {\em new\_\-iterations})}\label{classCM_1310ca4d4e2ca43a03678f3140815505}
+
+
+reset number of turbo iterations for variable-iterated TTCM and BICMID 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em new\_\-iterations}]new number of turbo iterations \end{description}
+\end{Desc}
+
+
+Definition at line 2066 of file cm.cpp.
+
+References bicmid, BICMID, BICMID\_\-parameters::iterations, TTCM\_\-parameters::iterations, mode, ttcm, and TTCM.\index{CM@{CM}!initialise@{initialise}}
+\index{initialise@{initialise}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::initialise ()}\label{classCM_003de3c218d9d3922921bc7c52501944}
+
+
+Initialise \doxyref{CM}{p.}{classCM}: allocate memory and initialise coder, modulator ({\em modulation\/} ) \& {\em interleaver\/}. 
+
+\begin{Desc}
+\item[Note:]\begin{itemize}
+\item {\em tcm\/} , {\em ttcm\/} and {\em bicmid\/} employ \doxyref{SP}{p.}{cm_8h_ecd69d9a67487cc45c38eb184c50538a} based signal mapping\item {\em bicm\/} employs \doxyref{GRAY}{p.}{cm_8h_e5f70677050eecd8909e0248e07b9e73} coded signal mapping\item interleaver tables will be generated and stored in files. \end{itemize}
+\end{Desc}
+
+
+Definition at line 2072 of file cm.cpp.
+
+References allocate\_\-memory\_\-bicm(), allocate\_\-memory\_\-tcm(), allocate\_\-memory\_\-ttcm(), bicm, BICM, BICMID, bicmid, GRAY, init\_\-channel\_\-interleaver(), init\_\-TTCM\_\-interleaver(), initCC(), initModulation\_\-GRAY(), initModulation\_\-SP(), initPunctureCC(), initTCM(), iterations, BICMID\_\-parameters::iterations, BICM\_\-parameters::k, modulation\_\-param::mode, mode, modulation, no\_\-of\_\-symbols, OFF, ON, BICM\_\-parameters::puncture\_\-code, s\_\-error(), SP, TCM, and TTCM.
+
+Referenced by main().\index{CM@{CM}!encode@{encode}}
+\index{encode@{encode}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int CM::encode (bvec {\em b\_\-Input\_\-bits}, ivec \& {\em i\_\-Output\_\-symbols})}\label{classCM_c9eef344ffcb77ff3ca5aec39ff7bb06}
+
+
+\doxyref{CM}{p.}{classCM} encoder: encode and channel interleave. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em b\_\-Input\_\-bits}]input data bits (binary vector) \item[{\em i\_\-Output\_\-symbols}]output coded symbol (integer vector)\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]\begin{itemize}
+\item length of {\em b\_\-Input\_\-bits=no\_\-of\_\-info\_\-symbols$\ast$k\/} \item length of {\em i\_\-Output\_\-symbols=no\_\-of\_\-symbols\/} \end{itemize}
+\end{Desc}
+
+
+Definition at line 321 of file cm.cpp.
+
+References bicm, BICM, BICMEnc(), BICMEnc\_\-Puncture(), BICMID, BICM\_\-parameters::bit\_\-interleaver, bit\_\-intlvi(), bits\_\-seq\_\-to\_\-symbol(), bits\_\-to\_\-symbol(), interleaver, intlvi(), BICM\_\-parameters::k, k, cm\_\-interleaver\_\-control::length, cm\_\-interleaver\_\-control::mode, mode, BICM\_\-parameters::n, no\_\-of\_\-info\_\-bits, no\_\-of\_\-symbols, no\_\-of\_\-tail\_\-bits, ON, s\_\-error(), symbol\_\-to\_\-bits(), cm\_\-interleaver\_\-control::table, TCM, TCMEnc(), Terminated, TTCM, and TurboTCMEnc().
+
+Referenced by encode\_\-bits(), and main().\index{CM@{CM}!encode_bits@{encode\_\-bits}}
+\index{encode_bits@{encode\_\-bits}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int CM::encode\_\-bits (bvec {\em b\_\-Input\_\-bits}, ivec \& {\em i\_\-Output\_\-bits})}\label{classCM_75975ce15cd092fdc04e0450c5a24e0f}
+
+
+\doxyref{CM}{p.}{classCM} encoder: encode and channel interleave. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em b\_\-Input\_\-bits}]input data bits (binary vector) \item[{\em i\_\-Output\_\-bits}]output coded bits (integer vector)\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]\begin{itemize}
+\item length of {\em b\_\-Input\_\-bits=no\_\-of\_\-info\_\-symbols$\ast$k\/} \item length of {\em i\_\-Output\_\-bits=no\_\-of\_\-symbols$\ast$n\/} \end{itemize}
+\end{Desc}
+
+
+Definition at line 415 of file cm.cpp.
+
+References encode(), n, no\_\-of\_\-symbols, and symbol\_\-to\_\-bits\_\-seq().\index{CM@{CM}!decode@{decode}}
+\index{decode@{decode}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int CM::decode (bvec \& {\em b\_\-decoded\_\-bits})}\label{classCM_5576fcd395d81e0d2dfd5c60f6a772a0}
+
+
+\doxyref{CM}{p.}{classCM} decoder: channel deinterleave and decode. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em b\_\-decoded\_\-bits}]decoded bits (binary vector)\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]\begin{itemize}
+\item data symbol a-posteriori probability updated and stored in\begin{enumerate}
+\item map-$>$Apo (TCM, TTCM)\item siso-$>$Apo\_\-dataword (BICM, BICMID)\end{enumerate}
+\item coded symbol a-posteriori probability updated and stored in\begin{enumerate}
+\item OPr (TCM, TTCM)\end{enumerate}
+\item coded bit a-posteriori-probability updated and stored in\begin{enumerate}
+\item siso-$>$Apo\_\-coded\_\-bit (BICM, BICMID) \end{enumerate}
+\end{itemize}
+\end{Desc}
+
+
+Definition at line 877 of file cm.cpp.
+
+References MAP\_\-dec::Apo, SISO\_\-dec::Apo\_\-coded\_\-bit, SISO\_\-dec::Apo\_\-data\_\-bit, SISO\_\-dec::Apo\_\-dataword, MAP\_\-dec::Apr, SISO\_\-dec::Apr\_\-coded\_\-bit, bicm, BICM, BICM\_\-ID\_\-dec\_\-log(), BICM\_\-ID\_\-dec\_\-log\_\-pun(), BICMID, bit\_\-de\_\-intlvm\_\-3d(), BICM\_\-parameters::bit\_\-interleaver, compute\_\-Pr\_\-from\_\-PrIQ(), de\_\-intlvd\_\-2d(), decode\_\-symbol(), cm\_\-interleaver\_\-control::i\_\-table, interleaver, intlvd\_\-2d(), MAP\_\-dec::Ip1, MAP\_\-dec::Ip2, IQ\_\-INTLV, BICM\_\-parameters::k, TCM\_\-parameters::k, k, TCM\_\-parameters::L, L, TCM\_\-parameters::last, BICM\_\-parameters::Lb, TCM\_\-parameters::Lb, cm\_\-interleaver\_\-control::length, log\_\-mapdec(), log\_\-TTCM\_\-dec(), map, MINF, mode, cm\_\-interleaver\_\-control::mode, BICM\_\-parameters::n, no\_\-of\_\-info\_\-bits, no\_\-of\_\-symbols, BICM\_\-parameters::NoBranches, TCM\_\-parameters::NoBranches, BICM\_\-parameters::NoStates, BICM\_\-parameters::Ns, TCM\_\-parameters::Ns, ON, OPr, OPr2, Pr, Pr\_\-to\_\-BitPr\_\-log(), PrI, PrQ, BICM\_\-parameters::Ps, TCM\_\-parameters::Ps, cm\_\-interleaver\_\-control::q\_\-table, s\_\-error(), siso, symbol\_\-to\_\-bits\_\-seq(), cm\_\-interleaver\_\-control::table, tcm, TCM, Terminated, and TTCM.
+
+Referenced by decode\_\-using\_\-Pr(), decode\_\-using\_\-PrIQ(), and main().\index{CM@{CM}!decode@{decode}}
+\index{decode@{decode}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vec CM::decode (bvec \& {\em b\_\-decoded\_\-bits}, vec {\em cm\_\-apr\_\-databits\_\-llr})}\label{classCM_a13fd20fe63e24d92f7c613e3fccb926}
+
+
+\doxyref{CM}{p.}{classCM} decoder: channel deinterleave and decode. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em b\_\-decoded\_\-bits}]decoded bits (binary vector) \item[{\em cm\_\-apr\_\-databits\_\-llr}]a-priori LLR of databits of \doxyref{CM}{p.}{classCM} scheme \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a-posteriori LLR of databits\end{Desc}
+\begin{Desc}
+\item[Note:]\begin{itemize}
+\item data symbol a-posteriori probability updated and stored in\begin{enumerate}
+\item map-$>$Apo (TCM, TTCM)\item siso-$>$Apo\_\-dataword (BICM, BICMID)\end{enumerate}
+\item coded symbol a-posteriori probability updated and stored in\begin{enumerate}
+\item OPr (TCM, TTCM)\end{enumerate}
+\item coded bit a-posteriori-probability updated and stored in\begin{enumerate}
+\item siso-$>$Apo\_\-coded\_\-bit (BICM, BICMID) \end{enumerate}
+\end{itemize}
+\end{Desc}
+
+
+Definition at line 580 of file cm.cpp.
+
+References MAP\_\-dec::Apo, SISO\_\-dec::Apo\_\-coded\_\-bit, SISO\_\-dec::Apo\_\-data\_\-bit, SISO\_\-dec::Apo\_\-dataword, MAP\_\-dec::Apr, SISO\_\-dec::Apr\_\-coded\_\-bit, bicm, BICM, BICM\_\-ID\_\-dec\_\-log(), BICM\_\-ID\_\-dec\_\-log\_\-pun(), BICMID, bit\_\-de\_\-intlvm\_\-3d(), BICM\_\-parameters::bit\_\-interleaver, compute\_\-Pr\_\-from\_\-PrIQ(), de\_\-intlvd\_\-2d(), decode\_\-symbol(), MAP\_\-dec::Extr, get\_\-data\_\-llr(), cm\_\-interleaver\_\-control::i\_\-table, interleaver, intlvd\_\-2d(), MAP\_\-dec::Ip1, MAP\_\-dec::Ip2, IQ\_\-INTLV, BICM\_\-parameters::k, TCM\_\-parameters::k, k, TCM\_\-parameters::L, L, TCM\_\-parameters::last, BICM\_\-parameters::Lb, TCM\_\-parameters::Lb, cm\_\-interleaver\_\-control::length, LLR\_\-to\_\-Prob(), log\_\-mapdec(), log\_\-TTCM\_\-dec\_\-apr(), map, MINF, mode, cm\_\-interleaver\_\-control::mode, BICM\_\-parameters::n, no\_\-of\_\-info\_\-bits, no\_\-of\_\-symbols, no\_\-of\_\-tail\_\-bits, BICM\_\-parameters::NoBranches, TCM\_\-parameters::NoBranches, BICM\_\-parameters::NoStates, BICM\_\-parameters::Ns, TCM\_\-parameters::Ns, ON, OPr, OPr2, Pr, Pr\_\-to\_\-BitPr\_\-log(), PrI, PrQ, BICM\_\-parameters::Ps, TCM\_\-parameters::Ps, cm\_\-interleaver\_\-control::q\_\-table, s\_\-error(), siso, symbol\_\-to\_\-bits\_\-seq(), cm\_\-interleaver\_\-control::table, tcm, TCM, Terminated, and TTCM.\index{CM@{CM}!decode_using_Pr@{decode\_\-using\_\-Pr}}
+\index{decode_using_Pr@{decode\_\-using\_\-Pr}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int CM::decode\_\-using\_\-Pr (bvec \& {\em b\_\-decoded\_\-bits}, mat {\em Pr})}\label{classCM_61e7b4f1a015aa86788fbc1da2021fc8}
+
+
+\doxyref{CM}{p.}{classCM} decoder: channel deinterleave and decode. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em b\_\-decoded\_\-bits}]decoded bits (binary vector) \item[{\em Pr}]matrix of the channel symbol probability\end{description}
+\end{Desc}
+In this function, the CM's demodulator is not used to calculate the channel symbol probability. Useful when the equaliser/space-time decoder was used to calculate the channel symbol probability. \begin{Desc}
+\item[Note:]\begin{itemize}
+\item data symbol a-posteriori probability updated and stored in\begin{enumerate}
+\item map-$>$Apo (TCM, TTCM)\item siso-$>$Apo\_\-dataword (BICM, BICMID)\end{enumerate}
+\item coded symbol a-posteriori probability updated and stored in\begin{enumerate}
+\item OPr (TCM, TTCM)\end{enumerate}
+\item coded bit extrinsic-probability updated and stored in\begin{enumerate}
+\item siso-$>$Apo\_\-coded\_\-bit (BICM, BICMID) \end{enumerate}
+\end{itemize}
+\end{Desc}
+
+
+Definition at line 1106 of file cm.cpp.
+
+References decode(), no\_\-of\_\-info\_\-bits, and Pr.\index{CM@{CM}!decode_using_PrIQ@{decode\_\-using\_\-PrIQ}}
+\index{decode_using_PrIQ@{decode\_\-using\_\-PrIQ}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int CM::decode\_\-using\_\-PrIQ (bvec \& {\em b\_\-decoded\_\-bits}, mat {\em PrI}, mat {\em PrQ})}\label{classCM_eca88a818d5961fec0296d852a3ff54c}
+
+
+\doxyref{CM}{p.}{classCM} decoder: channel deinterleave and decode. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em b\_\-decoded\_\-bits}]decoded bits (binary vector) \item[{\em PrI}]matrix of the channel symbol probability \item[{\em PrQ}]matrix of the channel symbol probability\end{description}
+\end{Desc}
+In this function, the CM's demodulator is not used to calculate the channel symbol probability. Useful when the equaliser/space-time decoder was used to calculate the channel symbol probability. This function is used for the IQ-interleaved system. \begin{Desc}
+\item[Note:]\begin{itemize}
+\item data symbol a-posteriori probability updated and stored in\begin{enumerate}
+\item map-$>$Apo (TCM, TTCM)\item siso-$>$Apo\_\-dataword (BICM, BICMID)\end{enumerate}
+\item coded symbol a-posteriori probability updated and stored in\begin{enumerate}
+\item OPr (TCM, TTCM)\end{enumerate}
+\item coded bit extrinsic-probability updated and stored in\begin{enumerate}
+\item siso-$>$Apo\_\-coded\_\-bit (BICM, BICMID) \end{enumerate}
+\end{itemize}
+\end{Desc}
+
+
+Definition at line 1120 of file cm.cpp.
+
+References decode(), PrI, and PrQ.\index{CM@{CM}!modulate_symbols@{modulate\_\-symbols}}
+\index{modulate_symbols@{modulate\_\-symbols}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}cvec CM::modulate\_\-symbols (ivec {\em i\_\-encoded\_\-symbols})}\label{classCM_32d511f9db34bf5965bcb18bb4b74629}
+
+
+\doxyref{CM}{p.}{classCM} modulator. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em i\_\-encoded\_\-symbols}]coded symbol (integer vector) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]modulated symbol (complex vector) \end{Desc}
+
+
+Definition at line 3247 of file cm.cpp.
+
+References cm\_\-interleaver\_\-control::i\_\-table, interleaver, IQ\_\-INTLV, iq\_\-intlvc(), cm\_\-interleaver\_\-control::length, cm\_\-interleaver\_\-control::mode, modulation, no\_\-of\_\-symbols, cm\_\-interleaver\_\-control::q\_\-table, s\_\-error(), and modulation\_\-param::SymbolMapping.
+
+Referenced by main().\index{CM@{CM}!demodulate_soft_symbols@{demodulate\_\-soft\_\-symbols}}
+\index{demodulate_soft_symbols@{demodulate\_\-soft\_\-symbols}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::demodulate\_\-soft\_\-symbols (cvec {\em c\_\-received\_\-signals}, double {\em \_\-2sigma2})}\label{classCM_688d335e487b2c91e8c0961d7e5e61f2}
+
+
+\doxyref{CM}{p.}{classCM} demodulator for AWGN channel. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c\_\-received\_\-signals}]received symbol (complex vector) \item[{\em \_\-2sigma2}]2$\ast$sigma$^\wedge$2\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]channel symbol probability \doxyref{CM::Pr}{p.}{classCM_97269e99c0d75779addc822f3c8cb2e0} (double matrix) updated \end{Desc}
+
+
+Definition at line 3280 of file cm.cpp.
+
+References demodulate\_\-soft\_\-symbols\_\-IQ(), interleaver, IQ\_\-INTLV, k, cm\_\-interleaver\_\-control::mode, modulation, no\_\-of\_\-symbols, modulation\_\-param::number\_\-of\_\-levels, Pr, s\_\-error(), and modulation\_\-param::SymbolMapping.
+
+Referenced by demodulate\_\-soft\_\-symbols\_\-relay(), demodulate\_\-soft\_\-symbols\_\-relay\_\-aaf(), and main().\index{CM@{CM}!demodulate_soft_symbols@{demodulate\_\-soft\_\-symbols}}
+\index{demodulate_soft_symbols@{demodulate\_\-soft\_\-symbols}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::demodulate\_\-soft\_\-symbols (cvec {\em c\_\-received\_\-signals}, cvec {\em channel\_\-gains}, double {\em \_\-2sigma2})}\label{classCM_a6ff7523d4d6357120b621545ae4a02f}
+
+
+\doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c\_\-received\_\-signals}]received symbol (complex vector) \item[{\em channel\_\-gains}]channel gains (complex vector) \item[{\em \_\-2sigma2}]2$\ast$sigma$^\wedge$2\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]channel symbol probability \doxyref{CM::Pr}{p.}{classCM_97269e99c0d75779addc822f3c8cb2e0} (double matrix) updated \end{Desc}
+
+
+Definition at line 3307 of file cm.cpp.
+
+References demodulate\_\-soft\_\-symbols\_\-IQ(), interleaver, IQ\_\-INTLV, k, cm\_\-interleaver\_\-control::mode, modulation, no\_\-of\_\-symbols, modulation\_\-param::number\_\-of\_\-levels, Pr, s\_\-error(), and modulation\_\-param::SymbolMapping.\index{CM@{CM}!demodulate_soft_symbols_relay@{demodulate\_\-soft\_\-symbols\_\-relay}}
+\index{demodulate_soft_symbols_relay@{demodulate\_\-soft\_\-symbols\_\-relay}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::demodulate\_\-soft\_\-symbols\_\-relay (cvec {\em c\_\-received\_\-signals}, cvec {\em channel\_\-gains}, double {\em \_\-2sigma2}, vec {\em beta}, vec {\em var\_\-n}, vec {\em pow\_\-s}, vec {\em mu\_\-n})}\label{classCM_18213503678b474c7d1f45df92afc9a8}
+
+
+\doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel in cooperative scheme: relay signals only. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c\_\-received\_\-signals}]received symbol (complex vector) \item[{\em channel\_\-gains}]channel gains (complex vector) \item[{\em \_\-2sigma2}]2$\ast$sigma$^\wedge$2\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]channel symbol probability \doxyref{CM::Pr}{p.}{classCM_97269e99c0d75779addc822f3c8cb2e0} (double matrix) updated \end{Desc}
+
+
+Definition at line 3342 of file cm.cpp.
+
+References interleaver, IQ\_\-INTLV, k, cm\_\-interleaver\_\-control::mode, modulation, no\_\-of\_\-symbols, modulation\_\-param::number\_\-of\_\-levels, Pr, s\_\-error(), and modulation\_\-param::SymbolMapping.
+
+Referenced by demodulate\_\-soft\_\-symbols\_\-relay().\index{CM@{CM}!demodulate_soft_symbols_relay@{demodulate\_\-soft\_\-symbols\_\-relay}}
+\index{demodulate_soft_symbols_relay@{demodulate\_\-soft\_\-symbols\_\-relay}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::demodulate\_\-soft\_\-symbols\_\-relay (cvec {\em c\_\-received\_\-signals}, cvec {\em channel\_\-gains}, double {\em N0}, cvec {\em c\_\-received\_\-signals\_\-rd}, cvec {\em channel\_\-gains\_\-rd}, double {\em N0\_\-rd})}\label{classCM_f767ed86614ba09d3a26cf96abc15843}
+
+
+\doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel in cooperative scheme: perfect relay. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c\_\-received\_\-signals}]received symbol (complex vector) \item[{\em channel\_\-gains}]channel gains (complex vector) \item[{\em \_\-2sigma2}]2$\ast$sigma$^\wedge$2\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]channel symbol probability \doxyref{CM::Pr}{p.}{classCM_97269e99c0d75779addc822f3c8cb2e0} (double matrix) updated \end{Desc}
+
+
+Definition at line 3389 of file cm.cpp.
+
+References interleaver, IQ\_\-INTLV, k, cm\_\-interleaver\_\-control::mode, modulation, no\_\-of\_\-symbols, modulation\_\-param::number\_\-of\_\-levels, Pr, s\_\-error(), and modulation\_\-param::SymbolMapping.\index{CM@{CM}!demodulate_soft_symbols_relay@{demodulate\_\-soft\_\-symbols\_\-relay}}
+\index{demodulate_soft_symbols_relay@{demodulate\_\-soft\_\-symbols\_\-relay}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::demodulate\_\-soft\_\-symbols\_\-relay (cvec {\em c\_\-received\_\-signals}, cvec {\em channel\_\-gains}, double {\em N0}, cvec {\em c\_\-received\_\-signals\_\-rd}, cvec {\em channel\_\-gains\_\-rd}, double {\em N0\_\-rd}, vec {\em beta}, vec {\em var\_\-n}, vec {\em pow\_\-s}, vec {\em mu\_\-n})}\label{classCM_3322763b18fd75b4906d74bb3285c0b3}
+
+
+\doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel in cooperative scheme: soft relay. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c\_\-received\_\-signals}]received symbol (complex vector) \item[{\em channel\_\-gains}]channel gains (complex vector) \item[{\em \_\-2sigma2}]2$\ast$sigma$^\wedge$2\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]channel symbol probability \doxyref{CM::Pr}{p.}{classCM_97269e99c0d75779addc822f3c8cb2e0} (double matrix) updated \end{Desc}
+
+
+Definition at line 3441 of file cm.cpp.
+
+References demodulate\_\-soft\_\-symbols(), demodulate\_\-soft\_\-symbols\_\-relay(), k, modulation, no\_\-of\_\-symbols, modulation\_\-param::number\_\-of\_\-levels, OPr, and Pr.\index{CM@{CM}!demodulate_soft_symbols_relay_aaf@{demodulate\_\-soft\_\-symbols\_\-relay\_\-aaf}}
+\index{demodulate_soft_symbols_relay_aaf@{demodulate\_\-soft\_\-symbols\_\-relay\_\-aaf}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::demodulate\_\-soft\_\-symbols\_\-relay\_\-aaf (cvec {\em c\_\-received\_\-signals}, cvec {\em channel\_\-gains}, double {\em N0}, cvec {\em c\_\-received\_\-signals\_\-rd}, cvec {\em channel\_\-gains\_\-rd}, double {\em N0\_\-rd}, cvec {\em channel\_\-gains\_\-sr}, vec {\em factor})}\label{classCM_74afb6f6381b98dbc0698f4517931b48}
+
+
+\doxyref{CM}{p.}{classCM} demodulator for flat Rayleigh fading channel in cooperative scheme: Amplify And Forward (AAF). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c\_\-received\_\-signals}]received symbol (complex vector) \item[{\em channel\_\-gains}]channel gains (complex vector) \item[{\em \_\-2sigma2}]2$\ast$sigma$^\wedge$2\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]channel symbol probability \doxyref{CM::Pr}{p.}{classCM_97269e99c0d75779addc822f3c8cb2e0} (double matrix) updated \end{Desc}
+
+
+Definition at line 3461 of file cm.cpp.
+
+References demodulate\_\-soft\_\-symbols(), interleaver, IQ\_\-INTLV, k, cm\_\-interleaver\_\-control::mode, modulation, no\_\-of\_\-symbols, modulation\_\-param::number\_\-of\_\-levels, OPr, Pr, s\_\-error(), and modulation\_\-param::SymbolMapping.\index{CM@{CM}!decode_symbol@{decode\_\-symbol}}
+\index{decode_symbol@{decode\_\-symbol}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::decode\_\-symbol (mat {\em Apo}, ivec \& {\em symbols}, int {\em N}, int {\em M})}\label{classCM_4b07ac51a6def99f01709e92f53dfaf6}
+
+
+decode symbol based on symbol's a-poteriori probability 
+
+Based on data symbol's a-poteriori probability, symbol block length and number of possible different input symbols, the most likely input data symbol sequence is given.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Apo}]data symbol's a-poteriori probability ({\em Apo\/} of {\em \doxyref{MAP\_\-dec}{p.}{structMAP__dec}\/} or {\em Apo\_\-dataword\/} {\em \doxyref{SISO\_\-dec}{p.}{structSISO__dec}\/}) \item[{\em symbols}]the most likely data symbol sequence \item[{\em N}]symbol block length ({\em no\_\-of\_\-symbols\/}) \item[{\em M}]number of possible different input data symbols ({\em 2$^\wedge$k\/}) \end{description}
+\end{Desc}
+
+
+Definition at line 555 of file cm.cpp.
+
+References k.
+
+Referenced by decode().\index{CM@{CM}!print_parameters@{print\_\-parameters}}
+\index{print_parameters@{print\_\-parameters}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::print\_\-parameters (FILE $\ast$ {\em fp})}\label{classCM_6dfe365324caf489043170477ffd5e16}
+
+
+print parameters to a file pointer. 
+
+printout the parameters of coder, modulator \& interleaver. 
+
+Definition at line 129 of file cm.cpp.
+
+References bicm, BICM, BICMID, CM\_\-APPROX\_\-LOG\_\-MAP, CM\_\-EXACT\_\-LOG\_\-MAP, CM\_\-MAX\_\-LOG\_\-MAP, CPSK, decoder\_\-type, BICM\_\-parameters::GenPoly, TCM\_\-parameters::GenPoly, interleaver\_\-mode, IQ\_\-INTLV, iterations, k, L, modulation\_\-param::mode, mode, modulation, modulation\_\-type, n, no\_\-of\_\-info\_\-symbols, no\_\-of\_\-symbols, modulation\_\-param::number\_\-of\_\-levels, OFF, ON, BICM\_\-parameters::puncture, BICM\_\-parameters::puncture\_\-code, SP, tcm, TCM, Terminated, and TTCM.
+
+Referenced by main().\index{CM@{CM}!print_parameters@{print\_\-parameters}}
+\index{print_parameters@{print\_\-parameters}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::print\_\-parameters (fstream \& {\em fs})}\label{classCM_b8b87fdf90f696fbc50a0170a713d245}
+
+
+print parameters to a file stream. 
+
+printout the parameters of coder, modulator \& interleaver. 
+
+Definition at line 188 of file cm.cpp.
+
+References bicm, BICM, BICMID, CM\_\-APPROX\_\-LOG\_\-MAP, CM\_\-EXACT\_\-LOG\_\-MAP, CM\_\-MAX\_\-LOG\_\-MAP, CPSK, decoder\_\-type, BICM\_\-parameters::GenPoly, TCM\_\-parameters::GenPoly, interleaver\_\-mode, IQ\_\-INTLV, iterations, k, L, modulation\_\-param::mode, mode, modulation, modulation\_\-type, n, no\_\-of\_\-info\_\-symbols, no\_\-of\_\-symbols, modulation\_\-param::number\_\-of\_\-levels, OFF, ON, BICM\_\-parameters::puncture, BICM\_\-parameters::puncture\_\-code, SP, tcm, TCM, Terminated, and TTCM.\index{CM@{CM}!print_coding_tables@{print\_\-coding\_\-tables}}
+\index{print_coding_tables@{print\_\-coding\_\-tables}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::print\_\-coding\_\-tables (FILE $\ast$ {\em fp})}\label{classCM_7f5b2811826f10541612b2b582381ad7}
+
+
+print coding tables to a file pointer. 
+
+printout the tables of Codeword NextState \& PreviousState. 
+
+Definition at line 245 of file cm.cpp.
+
+References bicm, BICM, BICMID, BICM\_\-parameters::Lb, TCM\_\-parameters::Lb, mode, NO\_\-LINK, BICM\_\-parameters::NoBranches, TCM\_\-parameters::NoBranches, BICM\_\-parameters::NoStates, TCM\_\-parameters::NoStates, BICM\_\-parameters::Ns, TCM\_\-parameters::Ns, OFF, BICM\_\-parameters::Ps, TCM\_\-parameters::Ps, BICM\_\-parameters::puncture\_\-code, tcm, TCM, and TTCM.\index{CM@{CM}!print_coding_tables@{print\_\-coding\_\-tables}}
+\index{print_coding_tables@{print\_\-coding\_\-tables}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::print\_\-coding\_\-tables (fstream \& {\em fs})}\label{classCM_94ea6d39dce04109b9ee2f33b9765522}
+
+
+print coding tables to a file stream. 
+
+printout the tables of Codeword NextState \& PreviousState. 
+
+Definition at line 287 of file cm.cpp.
+
+References bicm, BICM, BICMID, BICM\_\-parameters::Lb, TCM\_\-parameters::Lb, mode, NO\_\-LINK, BICM\_\-parameters::NoBranches, TCM\_\-parameters::NoBranches, BICM\_\-parameters::NoStates, TCM\_\-parameters::NoStates, BICM\_\-parameters::Ns, TCM\_\-parameters::Ns, OFF, BICM\_\-parameters::Ps, TCM\_\-parameters::Ps, BICM\_\-parameters::puncture\_\-code, tcm, TCM, and TTCM.\index{CM@{CM}!get_gen_poly@{get\_\-gen\_\-poly}}
+\index{get_gen_poly@{get\_\-gen\_\-poly}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::get\_\-gen\_\-poly ()\hspace{0.3cm}{\tt  [protected]}}\label{classCM_1b1ac377476206a9c994645a76cd72e7}
+
+
+get generator polynomial from a predefined table for TCM/TTCM 
+
+Based on {\em k\/} and {\em L\/} , the appropriate generator polynomials are loaded into GenPoly of {\em \doxyref{TCM\_\-parameters}{p.}{structTCM__parameters}\/}. 
+
+Definition at line 2432 of file cm.cpp.
+
+References TCM\_\-parameters::GenPoly, TCM\_\-parameters::k, L, s\_\-error(), and tcm.
+
+Referenced by initTCM().\index{CM@{CM}!get_CC_poly@{get\_\-CC\_\-poly}}
+\index{get_CC_poly@{get\_\-CC\_\-poly}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::get\_\-CC\_\-poly ()\hspace{0.3cm}{\tt  [protected]}}\label{classCM_d28896e99d259237903057a9e9a0971f}
+
+
+get generator polynomial and puncturing pattern from a predefined table for BICM/BICMID 
+
+Based on {\em k\/} and {\em L\/} , the appropriate generator polynomials are loaded into GenPoly of {\em \doxyref{BICM\_\-parameters}{p.}{structBICM__parameters}\/}. Punturing pattern on a rate-1/2 mother code for yielding a rate-5/6 BICM coder is loaded into puncture of {\em \doxyref{BICM\_\-parameters}{p.}{structBICM__parameters}\/}. 
+
+Definition at line 2771 of file cm.cpp.
+
+References bicm, BICM\_\-parameters::GenPoly, BICM\_\-parameters::k, BICM\_\-parameters::L, BICM\_\-parameters::M, BICM\_\-parameters::puncture, and s\_\-error().
+
+Referenced by initCC(), and initPunctureCC().\index{CM@{CM}!init_channel_interleaver@{init\_\-channel\_\-interleaver}}
+\index{init_channel_interleaver@{init\_\-channel\_\-interleaver}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::init\_\-channel\_\-interleaver (int {\em no\_\-of\_\-symbols})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_0cae76b9b9fc22d457570b33732e337d}
+
+
+initialise channel interleaver: symbol interleaver (ON, OFF) or IQ interleaver (IQ\_\-INTLV) 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em no\_\-of\_\-symbols}]number of coded symbols, or the interleaver length.\end{description}
+\end{Desc}
+channel interleaver table(s) will be generated and stored in file(s). 
+
+Definition at line 3736 of file cm.cpp.
+
+References bicm, BICM, BICMID, BICM\_\-parameters::bit\_\-interleaver, cm\_\-interleaver\_\-control::i\_\-table, init\_\-iq\_\-tables(), init\_\-random\_\-interleaver(), interleaver, interleaver\_\-mode, IQ\_\-INTLV, cm\_\-interleaver\_\-control::length, mode, cm\_\-interleaver\_\-control::mode, modulation, BICM\_\-parameters::n, modulation\_\-param::number\_\-of\_\-I\_\-levels, modulation\_\-param::number\_\-of\_\-Q\_\-levels, ON, PrI, PrQ, cm\_\-interleaver\_\-control::q\_\-table, and cm\_\-interleaver\_\-control::table.
+
+Referenced by initialise(), and reset\_\-CM().\index{CM@{CM}!log_mapdec@{log\_\-mapdec}}
+\index{log_mapdec@{log\_\-mapdec}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::log\_\-mapdec (int {\em N}, int {\em M}, int {\em S}, imat {\em Ps}, imat {\em Ns}, imat {\em Lb}, mat {\em Apr}, mat $\ast$ {\em Ip}, mat \& {\em Apo}, mat \& {\em OPr})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_194a827ca11464e65743e0c230e93a8c}
+
+
+Logarithmic MAP decoder for TCM. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em N}]the block length \item[{\em M}]the number of trellis branches \item[{\em S}]the number of trellis states \item[{\em Ps}]Previous state table \item[{\em Ns}]Next state table \item[{\em Lb}]Codeword (branch label) \item[{\em Apr}]a-priori probability of dataword \item[{\em Ip}]Ip[i](j,m) Branch transition metric at time i from state j with input dataword m \item[{\em Apo}]a-posteriori probability of dataword \item[{\em OPr}]a-posteriori probability of codeword \end{description}
+\end{Desc}
+
+
+Definition at line 1257 of file cm.cpp.
+
+References jacolog(), k, MINF, and OPr.
+
+Referenced by decode(), log\_\-TTCM\_\-dec(), and log\_\-TTCM\_\-dec\_\-apr().\index{CM@{CM}!log_TTCM_dec@{log\_\-TTCM\_\-dec}}
+\index{log_TTCM_dec@{log\_\-TTCM\_\-dec}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::log\_\-TTCM\_\-dec (int {\em N}, int {\em M}, int {\em S}, imat {\em Ps}, imat {\em Ns}, imat {\em Lb}, mat {\em Apr}, mat $\ast$ {\em Ip1}, mat $\ast$ {\em Ip2}, mat \& {\em Apo}, mat \& {\em OPr}, mat \& {\em OPr2})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_dfb79fccfb1772444d2073e86656663a}
+
+
+Logarithmic MAP decoder for TTCM, assumming no Apr information from other source. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em N}]the block length \item[{\em M}]the number of trellis branches \item[{\em S}]the number of trellis states \item[{\em Ps}]Previous state table \item[{\em Ns}]Next state table \item[{\em Lb}]Codeword (branch label) \item[{\em Apr}]a-priori probability of dataword \item[{\em Ip1}]decoder 1: Ip1[i](j,m) Branch transition metric at time i from state j with input dataword m \item[{\em Ip2}]decoder 2: Ip2[i](j,m) Branch transition metric at time i from state j with input dataword m \item[{\em Apo}]a-posteriori probability of dataword \item[{\em OPr}]a-posteriori probability of codeword (actual value after taking into account of OPr from decoder 1 \& 2) \item[{\em OPr2}]a-posteriori probability of codeword from decoder 2 \end{description}
+\end{Desc}
+
+
+Definition at line 1417 of file cm.cpp.
+
+References de\_\-intlvd\_\-2d(), TTCM\_\-parameters::interleaver, intlvd\_\-2d(), intlvm\_\-3d(), TTCM\_\-parameters::iterations, k, cm\_\-interleaver\_\-control::length, log\_\-mapdec(), MINF, OPr, OPr2, cm\_\-interleaver\_\-control::table, and ttcm.
+
+Referenced by decode().\index{CM@{CM}!log_TTCM_dec_apr@{log\_\-TTCM\_\-dec\_\-apr}}
+\index{log_TTCM_dec_apr@{log\_\-TTCM\_\-dec\_\-apr}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::log\_\-TTCM\_\-dec\_\-apr (int {\em N}, int {\em M}, int {\em S}, imat {\em Ps}, imat {\em Ns}, imat {\em Lb}, mat {\em Apr}, mat $\ast$ {\em Ip1}, mat $\ast$ {\em Ip2}, mat \& {\em Apo}, mat \& {\em OPr}, mat \& {\em OPr2})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_004c6f320fce7fd5c10822fcd81ba17e}
+
+
+Logarithmic MAP decoder for TTCM, can be used for joint \doxyref{CM}{p.}{classCM} and source coding where Apr is provided by the source decoder. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em N}]the block length \item[{\em M}]the number of trellis branches \item[{\em S}]the number of trellis states \item[{\em Ps}]Previous state table \item[{\em Ns}]Next state table \item[{\em Lb}]Codeword (branch label) \item[{\em Apr}]a-priori probability of dataword provided by the source decoder or any other source \item[{\em Ip1}]decoder 1: Ip1[i](j,m) Branch transition metric at time i from state j with input dataword m \item[{\em Ip2}]decoder 2: Ip2[i](j,m) Branch transition metric at time i from state j with input dataword m \item[{\em Apo}]a-posteriori probability of dataword \item[{\em OPr}]a-posteriori probability of codeword (actual value after taking into account of OPr from decoder 1 \& 2) \item[{\em OPr2}]a-posteriori probability of codeword from decoder 2 \end{description}
+\end{Desc}
+
+
+Definition at line 1341 of file cm.cpp.
+
+References de\_\-intlvd\_\-2d(), TTCM\_\-parameters::interleaver, intlvd\_\-2d(), intlvm\_\-3d(), TTCM\_\-parameters::iterations, k, cm\_\-interleaver\_\-control::length, log\_\-mapdec(), MINF, OPr, OPr2, cm\_\-interleaver\_\-control::table, and ttcm.
+
+Referenced by decode().\index{CM@{CM}!SISO_dec_log@{SISO\_\-dec\_\-log}}
+\index{SISO_dec_log@{SISO\_\-dec\_\-log}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::SISO\_\-dec\_\-log (int {\em N}, int {\em lD}, int {\em D}, int {\em S}, imat {\em Ps}, imat {\em Ns}, imat {\em Lb}, mat $\ast$ {\em Apr\_\-coded\_\-bit}, mat $\ast$\& {\em Apo\_\-coded\_\-bit}, mat $\ast$\& {\em Apo\_\-data\_\-bit}, mat \& {\em Apo\_\-dataword}, int {\em Terminated}, int {\em frame\_\-index})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_7c6afc45096a29b28053749a152b4346}
+
+
+Logarithmic SISO(MAP) decoder for BICM. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em N}]the block length \item[{\em lD}]the number of databits per codeword \item[{\em D}]the number of trellis branches \item[{\em S}]the number of trellis states \item[{\em Ps}]Previous state table \item[{\em Ns}]Next state table \item[{\em Lb}]Codeword (branch label) \item[{\em Apr\_\-coded\_\-bit}]a-priori probability of codedbit \item[{\em Apo\_\-coded\_\-bit}]a-posteriori probability of codedbit \item[{\em Apo\_\-data\_\-bit}]a-posteriori probability of databit \item[{\em Apo\_\-dataword}]a-posteriori probability of dataword \item[{\em Terminated}]Code termination {\em Terminated\/} \item[{\em frame\_\-index}]if channel interleaver is {\em J\/} times longer than the coded block, $ frame\_index \in\{0\ldots J-1\} $ \end{description}
+\end{Desc}
+
+
+Definition at line 1485 of file cm.cpp.
+
+References BitPr\_\-to\_\-Pr\_\-log(), jacolog(), k, MINF, NO\_\-LINK, ON, Pr\_\-to\_\-BitPr\_\-log(), and s\_\-error().
+
+Referenced by BICM\_\-ID\_\-dec\_\-log(), and BICM\_\-ID\_\-dec\_\-log\_\-pun().\index{CM@{CM}!SISO_dec_log@{SISO\_\-dec\_\-log}}
+\index{SISO_dec_log@{SISO\_\-dec\_\-log}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::SISO\_\-dec\_\-log (int {\em N}, int {\em lD}, int {\em D}, int {\em S}, imat {\em Ps}, imat {\em Ns}, imat {\em Lb}, mat {\em Apr\_\-codeword}, mat {\em Apr\_\-dataword}, mat \& {\em Apo\_\-codeword}, mat \& {\em Apo\_\-dataword}, int {\em Terminated}, int {\em frame\_\-index})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_47a3ac29924529d1e28709bfeff9884e}
+
+
+Logarithmic SISO(MAP) decoder for any coding scheme. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em N}]the block length \item[{\em lD}]the number of databits per codeword \item[{\em D}]the number of trellis branches \item[{\em S}]the number of trellis states \item[{\em Ps}]Previous state table \item[{\em Ns}]Next state table \item[{\em Lb}]Codeword (branch label) \item[{\em Apr\_\-codeword}]a-priori probability of codeword \item[{\em Apr\_\-dataword}]a-priori probability of dataword \item[{\em Apo\_\-codedword}]a-posteriori probability of codeword \item[{\em Apo\_\-dataword}]a-posteriori probability of dataword \item[{\em Terminated}]Code termination {\em Terminated\/} \item[{\em frame\_\-index}]if channel interleaver is {\em J\/} times longer than the coded block, $ frame\_index \in\{0\ldots J-1\} $ \end{description}
+\end{Desc}
+
+
+Definition at line 1592 of file cm.cpp.
+
+References jacolog(), k, MINF, NO\_\-LINK, ON, and s\_\-error().\index{CM@{CM}!BICM_ID_dec_log@{BICM\_\-ID\_\-dec\_\-log}}
+\index{BICM_ID_dec_log@{BICM\_\-ID\_\-dec\_\-log}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::BICM\_\-ID\_\-dec\_\-log (int {\em N}, int {\em lD}, int {\em D}, int {\em S}, imat {\em Ps}, imat {\em Ns}, imat {\em Lb}, mat $\ast$ {\em Apr\_\-coded\_\-bit}, mat $\ast$ {\em Apr\_\-data\_\-bit}, mat $\ast$\& {\em Apo\_\-coded\_\-bit}, mat $\ast$\& {\em Apo\_\-data\_\-bit}, mat \& {\em Apo\_\-dataword}, int {\em Terminated})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_5e9d0f3ff5d3be4e9295f5ba2cc2310a}
+
+
+Logarithmic SISO(MAP) decoder for BICM/BICMID. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em N}]the block length \item[{\em lD}]the number of databits per codeword \item[{\em D}]the number of trellis branches \item[{\em S}]the number of trellis states \item[{\em Ps}]Previous state table \item[{\em Ns}]Next state table \item[{\em Lb}]Codeword (branch label) \item[{\em Apr\_\-coded\_\-bit}]a-priori probability of codedbit \item[{\em Apr\_\-data\_\-bit}]a-priori probability of databit \item[{\em Apo\_\-coded\_\-bit}]a-posteriori probability of codedbit \item[{\em Apo\_\-data\_\-bit}]a-posteriori probability of databit \item[{\em Apo\_\-dataword}]a-posteriori probability of dataword \item[{\em Terminated}]Code termination {\em Terminated\/} \end{description}
+\end{Desc}
+
+
+Definition at line 1685 of file cm.cpp.
+
+References SISO\_\-dec::Apo\_\-coded\_\-bit, bicm, bicmid, bit\_\-de\_\-intlvm\_\-3d(), BICM\_\-parameters::bit\_\-interleaver, bit\_\-intlvm\_\-3d(), BitPr\_\-to\_\-Pr\_\-log(), extrinsic\_\-demod\_\-log(), BICMID\_\-parameters::iterations, cm\_\-interleaver\_\-control::length, BICM\_\-parameters::n, OPr, Pr, Pr\_\-to\_\-BitPr\_\-log(), siso, SISO\_\-dec\_\-log(), and cm\_\-interleaver\_\-control::table.
+
+Referenced by decode().\index{CM@{CM}!BICM_ID_dec_log_pun@{BICM\_\-ID\_\-dec\_\-log\_\-pun}}
+\index{BICM_ID_dec_log_pun@{BICM\_\-ID\_\-dec\_\-log\_\-pun}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::BICM\_\-ID\_\-dec\_\-log\_\-pun (int {\em N}, int {\em lD}, int {\em D}, int {\em S}, imat {\em Ps}, imat {\em Ns}, imat {\em Lb}, mat $\ast$ {\em Apr\_\-coded\_\-bit}, mat $\ast$ {\em Apr\_\-data\_\-bit}, mat $\ast$\& {\em Apo\_\-coded\_\-bit}, mat $\ast$\& {\em Apo\_\-data\_\-bit}, mat \& {\em Apo\_\-dataword}, int {\em Terminated})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_c87a497a2fbd0dd18e4328d8d9053629}
+
+
+Logarithmic SISO(MAP) decoder for BICM/BICMID employing puncturing. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em N}]the block length \item[{\em lD}]the number of databits per codeword \item[{\em D}]the number of trellis branches \item[{\em S}]the number of trellis states \item[{\em Ps}]Previous state table \item[{\em Ns}]Next state table \item[{\em Lb}]Codeword (branch label) \item[{\em Apr\_\-coded\_\-bit}]a-priori probability of codedbit \item[{\em Apr\_\-data\_\-bit}]a-priori probability of databit \item[{\em Apo\_\-coded\_\-bit}]a-posteriori probability of codedbit \item[{\em Apo\_\-data\_\-bit}]a-posteriori probability of databit \item[{\em Apo\_\-dataword}]a-posteriori probability of dataword \item[{\em Terminated}]Code termination {\em Terminated\/} \end{description}
+\end{Desc}
+
+
+Definition at line 1797 of file cm.cpp.
+
+References SISO\_\-dec::Apo\_\-coded\_\-bit, bicm, bicmid, bit\_\-de\_\-intlvm\_\-3d(), BICM\_\-parameters::bit\_\-interleaver, bit\_\-intlvm\_\-3d(), BitPr\_\-to\_\-Pr\_\-log(), depuncture(), extrinsic\_\-demod\_\-log(), get\_\-Apo\_\-dataword(), get\_\-p\_\-Apr\_\-data\_\-bit(), BICMID\_\-parameters::iterations, BICM\_\-parameters::k, cm\_\-interleaver\_\-control::length, BICM\_\-parameters::n, Pr, Pr\_\-to\_\-BitPr\_\-log(), puncture(), BICM\_\-parameters::puncture, siso, SISO\_\-dec\_\-log(), and cm\_\-interleaver\_\-control::table.
+
+Referenced by decode().\index{CM@{CM}!extrinsic_demod_log@{extrinsic\_\-demod\_\-log}}
+\index{extrinsic_demod_log@{extrinsic\_\-demod\_\-log}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::extrinsic\_\-demod\_\-log (int {\em N}, int {\em lC}, int {\em C}, mat $\ast$ {\em Apo\_\-coded\_\-bit}, mat {\em Pr}, mat $\ast$\& {\em Extr\_\-coded\_\-bit}, int {\em frame\_\-index})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_39910958bab65c593e5e6d4c75269ec3}
+
+
+demodulator of BICMID which outputs the extrinsic probability of coded bits 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em N}]the block length \item[{\em lC}]the number of codedbits per modulated symbol \item[{\em C}]the number of modulation level \item[{\em Apo\_\-coded\_\-bit}]a-posteriori probability of codedbit \item[{\em Pr}]original channel symbol probability from demodulator \item[{\em Extr\_\-coded\_\-bit}]extrinsic probability of codedbit \item[{\em frame\_\-index}]if channel interleaver is {\em J\/} times longer than the coded block, $ frame\_index \in\{0\ldots J-1\} $ \end{description}
+\end{Desc}
+
+
+Definition at line 1770 of file cm.cpp.
+
+References jacolog(), k, MINF, and Pr.
+
+Referenced by BICM\_\-ID\_\-dec\_\-log(), and BICM\_\-ID\_\-dec\_\-log\_\-pun().\index{CM@{CM}!depuncture@{depuncture}}
+\index{depuncture@{depuncture}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::depuncture (mat $\ast$ {\em Apr\_\-coded\_\-bit}, mat $\ast$\& {\em p\_\-Apr\_\-coded\_\-bit}, int {\em N}, int {\em dataword\_\-length}, int {\em codeword\_\-length}, ivec {\em puncture}, int {\em p\_\-lC}, int {\em frame\_\-index})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_7c9a282e033652a1ac0ccaa4c63cca7b}
+
+
+depuncturer for punctured BICM code 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Apr\_\-coded\_\-bit}](input) a-priori probability of codedbit from demodulator \item[{\em p\_\-Apr\_\-coded\_\-bit}](output) a-priori probability of codedbit after depunturing \item[{\em N}]the block length \item[{\em dataword\_\-length}]the number of databit per coded symbol \item[{\em codeword\_\-length}]the number of codedbit per coded symbol \item[{\em puncture}]punturing pattern \item[{\em p\_\-lC}]mother code's codedbit per coded symbol \item[{\em frame\_\-index}]if channel interleaver is {\em J\/} times longer than the coded block, $ frame\_index \in\{0\ldots J-1\} $ \end{description}
+\end{Desc}
+
+
+Definition at line 1918 of file cm.cpp.
+
+References k.
+
+Referenced by BICM\_\-ID\_\-dec\_\-log\_\-pun().\index{CM@{CM}!puncture@{puncture}}
+\index{puncture@{puncture}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::puncture (mat $\ast$\& {\em Apo\_\-coded\_\-bit}, mat $\ast$ {\em p\_\-Apo\_\-coded\_\-bit}, int {\em N}, int {\em dataword\_\-length}, int {\em codeword\_\-length}, ivec {\em puncture}, int {\em p\_\-lC}, int {\em frame\_\-index})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_9f1d5df498948ca6227fb48aeecaef9e}
+
+
+puncturer for punctured BICM code 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Apo\_\-coded\_\-bit}](output extrinsic probability of codedbit after puncturing \item[{\em p\_\-Apo\_\-coded\_\-bit}](input) extrinsic probability of codedbit from decoder \item[{\em N}]the block length \item[{\em dataword\_\-length}]the number of databit per coded symbol \item[{\em codeword\_\-length}]the number of codedbit per coded symbol \item[{\em puncture}]punturing pattern \item[{\em p\_\-lC}]mother code's codedbit per coded symbol \item[{\em frame\_\-index}]if channel interleaver is {\em J\/} times longer than the coded block, $ frame\_index \in\{0\ldots J-1\} $ \end{description}
+\end{Desc}
+
+
+Definition at line 1974 of file cm.cpp.
+
+References k.
+
+Referenced by BICM\_\-ID\_\-dec\_\-log\_\-pun().\index{CM@{CM}!get_Apo_dataword@{get\_\-Apo\_\-dataword}}
+\index{get_Apo_dataword@{get\_\-Apo\_\-dataword}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::get\_\-Apo\_\-dataword (mat \& {\em Apo\_\-dataword}, mat $\ast$\& {\em Apo\_\-data\_\-bit}, mat $\ast$ {\em p\_\-Apo\_\-data\_\-bit}, int {\em N}, int {\em dataword\_\-length}, int {\em p\_\-lD})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_aa0b1314f2c80933e8d4a5ea6e069de4}
+
+
+calculate dataword's and databit's a-posteriori probability from coded bit's a-posteriori probability of decoder 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Apo\_\-dataword}](output) dataword's a-posteriori probability \item[{\em Apo\_\-data\_\-bit}](output) databit's a-posteriori probability \item[{\em p\_\-Apo\_\-data\_\-bit}](input) databit's a-posteriori probability from decoder \item[{\em N}]the block length \item[{\em dataword\_\-length}]the number of databit per coded symbol \item[{\em p\_\-lD}]mother code's databit per coded symbol \end{description}
+\end{Desc}
+
+
+Definition at line 2015 of file cm.cpp.
+
+References BitPr\_\-to\_\-Pr\_\-log(), and k.
+
+Referenced by BICM\_\-ID\_\-dec\_\-log\_\-pun().\index{CM@{CM}!get_p_Apr_data_bit@{get\_\-p\_\-Apr\_\-data\_\-bit}}
+\index{get_p_Apr_data_bit@{get\_\-p\_\-Apr\_\-data\_\-bit}!CM@{CM}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void CM::get\_\-p\_\-Apr\_\-data\_\-bit (mat $\ast$\& {\em p\_\-Apr\_\-data\_\-bit}, mat $\ast$ {\em Apr\_\-data\_\-bit}, int {\em N}, int {\em dataword\_\-length}, int {\em p\_\-lD})\hspace{0.3cm}{\tt  [protected]}}\label{classCM_28e30b0b42c2ca874881ee73bf181d5e}
+
+
+calculate the databit's a-priori probability for punctured BICM decoding 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\_\-Apr\_\-data\_\-bit}](input) databit's a-priori probability \item[{\em Apr\_\-data\_\-bit}](output) databit's a-priori probability \item[{\em N}]the block length \item[{\em dataword\_\-length}]the number of databit per coded symbol \item[{\em p\_\-lD}]mother code's databit per coded symbol \end{description}
+\end{Desc}
+
+
+Definition at line 2005 of file cm.cpp.
+
+References k.
+
+Referenced by BICM\_\-ID\_\-dec\_\-log\_\-pun().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf cm.h}\item 
+{\bf cm.cpp}\end{CompactItemize}

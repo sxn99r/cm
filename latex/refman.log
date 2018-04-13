@@ -1,0 +1,337 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2001.9.7)  26 MAR 2003 15:25
+**refman.tex
+(refman.tex
+LaTeX2e <2000/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, i
+talian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/book.cls
+Document Class: book 2000/05/19 v1.4b Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/bk10.clo
+File: bk10.clo 2000/05/19 v1.4b Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/misc/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/share/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 1999/03/03 v1.2f A4 based page layout
+))
+(/usr/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
+\headwidth=\dimen103
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1999/02/16 v1.0l Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/share/texmf/tex/latex/misc/float.sty
+Package: float 1999/05/29 v1.2d Float enhancements (AL)
+\c@float@type=\count88
+\float@box=\box26
+\@floatcapt=\box27
+)
+(/usr/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+) (doxygen.sty
+Package: doxygen 
+
+(/usr/share/texmf/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count89
+\calc@Bcount=\count90
+\calc@Adimen=\dimen106
+\calc@Bdimen=\dimen107
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count91
+)
+(/usr/share/texmf/tex/latex/tools/array.sty
+Package: array 1998/05/13 v2.3m Tabular extension package (FMi)
+\col@sep=\dimen108
+\extrarowheight=\dimen109
+\NC@list=\toks15
+\extratabsurround=\skip45
+\backup@length=\skip46
+)
+\tmplength=\skip47
+)
+\@indexfile=\write3
+\openout3 = `refman.idx'.
+
+
+Writing index file refman.idx
+(refman.aux (structBICMID__parameters.aux) (classCM.aux)
+(structinterleaver__control.aux) (structMAP__dec.aux)
+(structmodulation__param.aux) (structSISO__dec.aux) (structTCM__parameters.aux)
+(structTTCM__parameters.aux) (cm_8h.aux) (cm__test_8cpp.aux))
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+ [1
+
+
+] [2
+
+]
+(refman.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+)
+\tf@toc=\write4
+\openout4 = `refman.toc'.
+
+ [1
+
+] [2
+
+]
+Chapter 1.
+(modules.tex) [1
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
+ (/usr/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 30.
+ [2
+
+]
+Chapter 2.
+(annotated.tex) [3] [4
+
+]
+Chapter 3.
+(files.tex) [5] [6
+
+]
+Chapter 4.
+(group__coded__modulation.tex
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
+) [7] [8
+
+]
+Chapter 5.
+(structBICM__parameters.tex [9]) [10]
+\openout2 = `structBICMID__parameters.aux'.
+
+ (structBICMID__parameters.tex) [11
+
+]
+\openout2 = `classCM.aux'.
+
+
+(classCM.tex [12
+
+
+] [13] [14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--440
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--467
+  
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 485--485
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 507--507
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 516--516
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--537
+  
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--593
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--605
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--622
+  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--633
+  
+ []
+
+[19]) [20]
+\openout2 = `structinterleaver__control.aux'.
+
+ (structinterleaver__control.tex) [21
+
+
+]
+\openout2 = `structMAP__dec.aux'.
+
+ (structMAP__dec.tex) [22
+
+
+]
+\openout2 = `structmodulation__param.aux'.
+
+
+(structmodulation__param.tex) [23
+
+
+]
+\openout2 = `structSISO__dec.aux'.
+
+ (structSISO__dec.tex) [24
+
+
+]
+\openout2 = `structTCM__parameters.aux'.
+
+
+(structTCM__parameters.tex) [25
+
+
+]
+\openout2 = `structTTCM__parameters.aux'.
+
+ (structTTCM__parameters.tex) [26
+
+
+]
+Chapter 6.
+(cm_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+  
+ []
+
+) [27
+
+
+]
+\openout2 = `cm_8h.aux'.
+
+ (cm_8h.tex [28
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+  
+ []
+
+) [29]
+\openout2 = `cm__test_8cpp.aux'.
+
+ (cm__test_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+  
+ []
+
+) [30
+
+
+] (refman.ind [31
+
+
+] [32] [33] [34] [35]) (refman.aux
+(structBICMID__parameters.aux) (classCM.aux) (structinterleaver__control.aux)
+(structMAP__dec.aux) (structmodulation__param.aux) (structSISO__dec.aux)
+(structTCM__parameters.aux) (structTTCM__parameters.aux) (cm_8h.aux)
+(cm__test_8cpp.aux)) ) 
+Here is how much of TeX's memory you used:
+ 1111 strings out of 20887
+ 13695 string characters out of 196275
+ 68296 words of memory out of 350001
+ 4029 multiletter control sequences out of 10000+15000
+ 9228 words of font info for 33 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 10000
+ 32i,15n,40p,865b,632s stack positions out of 3000i,100n,1500p,50000b,4000s
+
+Output written on refman.dvi (39 pages, 82688 bytes).

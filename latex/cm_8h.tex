@@ -1,0 +1,109 @@
+\section{cm.h File Reference}
+\label{cm_8h}\index{cm.h@{cm.h}}
+Definition of Coded Modulation (\doxyref{CM}{p.}{classCM}) class. 
+
+{\tt \#include \char`\"{}itpp/itbase.h\char`\"{}}\par
+{\tt \#include \char`\"{}cm.h\char`\"{}}\par
+\subsection*{Namespaces}
+\begin{CompactItemize}
+\item 
+namespace \textbf{itpp}
+\item 
+namespace \textbf{std}
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct {\bf modulation\_\-param}
+\begin{CompactList}\small\item\em struct of \doxyref{CM}{p.}{classCM} modulator \item\end{CompactList}\item 
+struct {\bf cm\_\-interleaver\_\-control}
+\begin{CompactList}\small\item\em struct of \doxyref{CM}{p.}{classCM} interleaver \item\end{CompactList}\item 
+struct {\bf TCM\_\-parameters}
+\begin{CompactList}\small\item\em struct of TCM for \doxyref{CM}{p.}{classCM} \item\end{CompactList}\item 
+struct {\bf TTCM\_\-parameters}
+\begin{CompactList}\small\item\em struct of TTCM for \doxyref{CM}{p.}{classCM}: consider identical component codes \item\end{CompactList}\item 
+struct {\bf BICM\_\-parameters}
+\begin{CompactList}\small\item\em struct of BICM for \doxyref{CM}{p.}{classCM}: rate-5/6 64QAM BICM employs puncturing on rate-1/2 mother code \item\end{CompactList}\item 
+struct {\bf BICMID\_\-parameters}
+\begin{CompactList}\small\item\em struct of BICMID for \doxyref{CM}{p.}{classCM}: employing soft demodulator feedback \item\end{CompactList}\item 
+struct {\bf MAP\_\-dec}
+\begin{CompactList}\small\item\em struct of MAP decoder: for TCM and TTCM in \doxyref{CM}{p.}{classCM} \item\end{CompactList}\item 
+struct {\bf SISO\_\-dec}
+\begin{CompactList}\small\item\em struct of Soft-In Soft-Out decoder: for BICM and BICMID in \doxyref{CM}{p.}{classCM} \item\end{CompactList}\item 
+class {\bf CM}
+\begin{CompactList}\small\item\em \doxyref{CM}{p.}{classCM} Class. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf CPSK}~0\label{cm_8h_07f2a000bb7ecef9011cdc5a02658cce}
+
+\begin{CompactList}\small\item\em define CM-based Phase-Shift-Keying modulation \item\end{CompactList}\item 
+\#define {\bf CQAM}~1\label{cm_8h_53b2e3c18e665091f2d8a3aa4bd9e68c}
+
+\begin{CompactList}\small\item\em define CM-based Quadrature-Amplitude-Modulation \item\end{CompactList}\item 
+\#define {\bf GRAY}~0\label{cm_8h_e5f70677050eecd8909e0248e07b9e73}
+
+\begin{CompactList}\small\item\em define Gray-coded (GRAY) signal labelling \item\end{CompactList}\item 
+\#define {\bf SP}~1\label{cm_8h_ecd69d9a67487cc45c38eb184c50538a}
+
+\begin{CompactList}\small\item\em define Set Partition (SP) based signal labelling \item\end{CompactList}\item 
+\#define {\bf OFF}~0\label{cm_8h_29e413f6725b2ba32d165ffaa35b01e5}
+
+\begin{CompactList}\small\item\em define OFF \item\end{CompactList}\item 
+\#define {\bf ON}~1\label{cm_8h_d76d1750a6cdeebd506bfcd6752554d2}
+
+\begin{CompactList}\small\item\em define ON \item\end{CompactList}\item 
+\#define {\bf IQ\_\-INTLV}~2\label{cm_8h_0e8351180111f8b1e0bf7c7484154684}
+
+\begin{CompactList}\small\item\em define In-phase Quadrature-phase Interleaving \item\end{CompactList}\item 
+\#define {\bf TCM}~1\label{cm_8h_33275405824294f33926d36091cc4d27}
+
+\begin{CompactList}\small\item\em define Trellis Coded Modulation \item\end{CompactList}\item 
+\#define {\bf TTCM}~2\label{cm_8h_ad4bfaba09cc6a6f69d2a48fa0423110}
+
+\begin{CompactList}\small\item\em define Turbo Trellis Coded Modulation \item\end{CompactList}\item 
+\#define {\bf BICM}~3\label{cm_8h_1218f70f86ea4acd32d0b58267a37b30}
+
+\begin{CompactList}\small\item\em define Bit-Interleaved Coded Modulation \item\end{CompactList}\item 
+\#define {\bf BICMID}~4\label{cm_8h_68291ce81955ca351b54cc17eed37a7b}
+
+\begin{CompactList}\small\item\em define Bit-Interleaved Coded Modulation with Iterative Decoding \item\end{CompactList}\item 
+\#define {\bf CM\_\-EXACT\_\-LOG\_\-MAP}~1\label{cm_8h_153b4193dd1c76575af0d2e1f56c9ba5}
+
+\begin{CompactList}\small\item\em define Exact Logarithmic (Log) Maximum A-posteriori Probability (MAP) decoding \item\end{CompactList}\item 
+\#define {\bf CM\_\-APPROX\_\-LOG\_\-MAP}~2\label{cm_8h_7eb345f72a74fb180af11b6a150488cf}
+
+\begin{CompactList}\small\item\em define Approximate Log MAP decoding \item\end{CompactList}\item 
+\#define {\bf CM\_\-MAX\_\-LOG\_\-MAP}~3\label{cm_8h_f071e75e173cacdf76de0b0e09a0e635}
+
+\begin{CompactList}\small\item\em define Maximum Log MAP decoding \item\end{CompactList}\item 
+\#define {\bf MINF}~-100000\label{cm_8h_1fca73ec0aeff99662a055435f007d56}
+
+\begin{CompactList}\small\item\em define Minimum Log probability (-infinity) \item\end{CompactList}\item 
+\#define {\bf NO\_\-LINK}~100000\label{cm_8h_302dd036236eaa23b3cfd611d008dc59}
+
+\begin{CompactList}\small\item\em define No Linkage for a particular trellis transition \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+double {\bf jacolog\_\-1} (double x, double y)\label{cm_8h_d782c993a934df32bb391c6e21b0eb7c}
+
+\begin{CompactList}\small\item\em Jacobian logarithmic summation: {\em decoder\_\-type=\/} \doxyref{CM\_\-EXACT\_\-LOG\_\-MAP}{p.}{cm_8h_153b4193dd1c76575af0d2e1f56c9ba5}. \item\end{CompactList}\item 
+double {\bf jacolog\_\-2} (double x, double y)\label{cm_8h_2a807e24a9390b785cfc90ca5f297aa0}
+
+\begin{CompactList}\small\item\em Jacobian logarithmic summation: {\em decoder\_\-type=\/} \doxyref{CM\_\-APPROX\_\-LOG\_\-MAP}{p.}{cm_8h_7eb345f72a74fb180af11b6a150488cf}. \item\end{CompactList}\item 
+double {\bf jacolog\_\-3} (double x, double y)\label{cm_8h_7a27cfbdba738e5073fd0e1415f51efb}
+
+\begin{CompactList}\small\item\em Jacobian logarithmic summation: {\em decoder\_\-type=\/} \doxyref{CM\_\-MAX\_\-LOG\_\-MAP}{p.}{cm_8h_f071e75e173cacdf76de0b0e09a0e635}. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Definition of Coded Modulation (\doxyref{CM}{p.}{classCM}) class. 
+
+\begin{Desc}
+\item[Author:]Michael Ng\end{Desc}
+1.03
+
+2009/06/24 
+
+Definition in file {\bf cm.h}.

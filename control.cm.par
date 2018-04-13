@@ -1,0 +1,11 @@
+2	# cm mode : 1=TCM, 2=TTCM, 3=BICM, 4=BICMID
+2	# k : length of dataword
+3	# n : length of codeword (k+1)
+3	# L : code memory length
+1	# code termination mode, 0=OFF, 1=ON
+4	# iterations number : for TTCM and BICMID only
+2	# decoder_type : 1=EXACT_LOG_MAP, 2=APPROX_LOG_MAP, 3=MAX_LOG_MAP
+1000  	# no_of_symbols : number of coded symbols in a block (plus tail symbols)
+0 	# modulation_type : 0=PSK, 1=QAM
+1	# interleaver_mode : 0=OFF, 1=ON, IQ_INTLV=2 (0,1 are for TCM&TTCM's symbol interleaver only)
+ttcm4it-m3-8psk.dat # result file name : specify a name for your result file
